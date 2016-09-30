@@ -29,7 +29,7 @@ angular.module('starter', ['ionic'])
       url: '/',
       templateUrl: 'index.html',
       //controller: "Main_Ctrl"
-    })
+    }) 
     .state('voter_find_event',{
       url: '/voter_find_event',
       templateUrl: 'templates/voter_find_event.html',
