@@ -1,0 +1,37 @@
+<ion-view>
+  <ion-content>
+    <div class="list">
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" placeholder="e.g. Twilight" ng-model="query.queryString">
+        </label>
+        <button class="button button-positive button-small" ng-click="searchMovie()">
+          Search Movie
+        </button>
+      </div>
+
+      <div ng-if="data.result" class="list card">
+        <div class="item item-body">
+          <img class="full-image" ng-src="{{ data.result.poster }}" height=300 width=70>
+          <div class="row">
+            <div class="col">
+              <h3>Movie Title:</h3>
+              <p>{{ data.result.title }}</p>
+            </div>
+            <div class="col">
+              <h3>Movie Year:</h3>
+              <p>{{ data.result.year }}</p>
+            </div>
+          </div>
+          <p>
+            <button ng-click="addFavorite()" class="button button-small button-balanced ion-plus-round"> Add to Favorites</button>
+          </p>
+        </div>
+        
+
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>
