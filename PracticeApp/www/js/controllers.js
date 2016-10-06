@@ -2,7 +2,7 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope) {})
 
-.controller('ChatsCtrl', function($scope, Chats) {
+.controller('ChatsCtrl', function($scope, Chats, $state) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -11,10 +11,15 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-  $scope.chats = Chats.all();
+  $scope.nextClicked = function(){
+    console.log("next clicked");
+    $state.go("host_create_poll");
+  };
+
+ /* $scope.chats = Chats.all();
   $scope.remove = function(chat) {
     Chats.remove(chat);
-  };
+  };*/
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
@@ -25,4 +30,9 @@ angular.module('starter.controllers', [])
   $scope.settings = {
     enableFriends: true
   };
+})
+
+
+.controller('host_create_poll_Ctrl', function(){
+  console.log('loaded host_create_poll_Ctrl');
 });

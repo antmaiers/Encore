@@ -77,6 +77,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'AccountCtrl'
       }
     }
+  })
+
+  .state('host_create_poll', {
+    url: '/host_create_poll',
+    views: {
+      'host_create_poll': {
+        templateUrl: 'templates/host_create_poll.html',
+        controller: 'host_create_poll_Ctrl'
+      }
+    }
   });
 
   // if none of the above states are matched, use this as the fallback
