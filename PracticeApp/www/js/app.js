@@ -87,7 +87,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'host_create_poll_Ctrl'
       }
     }
-  });
+  })
+
+    .state('voter_vote', {
+      url: '/voter_vote',
+      views: {
+        'voter_vote': {
+          templateUrl: 'templates/voter_vote.html',
+          controller: 'voter_vote_Ctrl'
+        }
+      }
+    })
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/dash');

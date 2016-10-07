@@ -13,7 +13,7 @@ angular.module('starter.controllers', [])
 
   $scope.nextClicked = function(){
     console.log("next clicked");
-    $state.go("host_create_poll");
+    $state.go("host_create_poll")
   };
 
  /* $scope.chats = Chats.all();
@@ -27,12 +27,17 @@ angular.module('starter.controllers', [])
 })
 
 .controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
+  $scope.searchClicked = function(){
+    console.log("search clicked");
+    $state.go("voter_vote")
   };
 })
 
 
 .controller('host_create_poll_Ctrl', function(){
   console.log('loaded host_create_poll_Ctrl');
-});
+})
+
+.controller('voter_vote_Ctrl', function(){
+  console.log('loaded voter_vote_Ctrl');
+})
