@@ -26,7 +26,7 @@ angular.module('starter.controllers', [])
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
-.controller('AccountCtrl', function($scope) {
+.controller('AccountCtrl', function($scope, $state) {
   $scope.searchClicked = function(){
     console.log("search clicked");
     $state.go("voter_vote")
@@ -34,10 +34,53 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('host_create_poll_Ctrl', function(){
-  console.log('loaded host_create_poll_Ctrl');
+.controller('host_create_poll_Ctrl', function($scope, $state){
+  $scope.backClicked = function(){
+    console.log("back clicked");
+    $state.go("tab.chats")
+  };
+  $scope.submitClicked = function(){
+    console.log("submit clicked");
+    $state.go("host_poll_in_progress")
+  };
+  //console.log('loaded host_create_poll_Ctrl');
 })
 
-.controller('voter_vote_Ctrl', function(){
-  console.log('loaded voter_vote_Ctrl');
+.controller('host_poll_in_progress_Ctrl', function($scope, $state){
+  $scope.stopClicked = function(){
+    console.log("stop clicked");
+    $state.go("host_poll_results")
+  };
+  $scope.autoClicked = function(){
+    console.log("auto clicked");
+    //$state.go("")
+  };
+})
+
+.controller('host_poll_results_Ctrl', function($scope, $state){
+  $scope.homeClicked = function(){
+    console.log("home clicked");
+    $state.go("tab.dash")
+  };
+})
+
+
+.controller('voter_vote_Ctrl', function($scope, $state){
+    $scope.backClicked = function(){
+    console.log("back clicked");
+    $state.go("tab.account")
+  };
+
+    $scope.submitClicked = function(){
+    console.log("submit clicked");
+    $state.go("voter_submission")
+  };
+  //console.log('loaded voter_vote_Ctrl');
+})
+
+.controller('voter_submission_Ctrl', function($scope, $state){
+  $scope.homeClicked = function(){
+    console.log("home clicked");
+    $state.go("tab.dash")
+  };
 })

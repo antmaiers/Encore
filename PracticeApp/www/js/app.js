@@ -81,23 +81,34 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   .state('host_create_poll', {
     url: '/host_create_poll',
-    views: {
-      'host_create_poll': {
-        templateUrl: 'templates/host_create_poll.html',
-        controller: 'host_create_poll_Ctrl'
-      }
-    }
+    templateUrl: 'templates/host_create_poll.html',
+    controller: 'host_create_poll_Ctrl'
   })
 
-    .state('voter_vote', {
-      url: '/voter_vote',
-      views: {
-        'voter_vote': {
-          templateUrl: 'templates/voter_vote.html',
-          controller: 'voter_vote_Ctrl'
-        }
-      }
-    })
+  .state('host_poll_in_progress', {
+    url: '/host_poll_in_progress',
+    templateUrl: 'templates/host_poll_in_progress.html',
+    controller: 'host_poll_in_progress_Ctrl'
+  })
+
+  .state('host_poll_results', {
+    url: '/host_poll_results',
+    templateUrl: 'templates/host_poll_results.html',
+    controller: 'host_poll_results_Ctrl'
+  })
+
+
+  .state('voter_vote', {
+    url: '/voter_vote',
+    templateUrl: 'templates/voter_vote.html',
+    controller: 'voter_vote_Ctrl'
+  })
+
+  .state('voter_submission', {
+    url: '/voter_submission',
+    templateUrl: 'templates/voter_submission.html',
+    controller: 'voter_submission_Ctrl'
+  })
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/dash');
