@@ -15,7 +15,12 @@ angular.module('starter.controllers', [])
     console.log("login clicked");
     $state.go("host_create_event")
   };*/
-
+firebase.auth().createUserWithEmailAndPassword("a@b.com", "password").catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+});
 
   $scope.user = {};
 
