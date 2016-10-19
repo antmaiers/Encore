@@ -2,7 +2,7 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope) {})
 
-.controller('ChatsCtrl', function($scope, Chats, $state) {
+.controller('ChatsCtrl', function($scope, $firebaseAuth, $timeout, $state) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -11,15 +11,33 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-  $scope.loginClicked = function(){
+ /* $scope.loginClicked = function(){
     console.log("login clicked");
     $state.go("host_create_event")
+  };*/
+
+
+  $scope.user = {};
+
+  $scope.signIn = function(){
+    console.log("$scope.user:" + JSON.stringify($scope.user));
+
+    $scope.firebaseUser = null;
+    $scope.error = null;
+
+    var auth = $firebaseAuth();
+
+    auth.$signInWithEmailAndPassword($scope.user.email, $scope.user.password).then(function(firebaseUser) {
+      $scope.firebaseUser = firebaseUser;
+
+      $timeout(function(){
+        $state.go('host_create_poll');
+      }, 2000);
+    }).catch(function(error) {
+      $scope.error = error;
+    });
   };
 
- /* $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };*/
 })
 
 .controller('host_create_event_Ctrl', function($scope, $state) {
@@ -93,3 +111,9 @@ angular.module('starter.controllers', [])
     $state.go("tab.dash")
   };
 })
+
+.factory("Auth", ["$firebaseAuth",
+  function($firebaseAuth) {
+    return $firebaseAuth();
+  }
+])

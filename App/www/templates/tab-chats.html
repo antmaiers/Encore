@@ -1,42 +1,21 @@
 <ion-view view-title="Host">
   <ion-content>
 
-  <div class="list list-inset">
+ <div class="list list-inset">
   <label class="item item-input">
-    <input type="text" placeholder="Email">
+    <span class="input-label">Email</span>
+      <input type="text" ng-model="user.email" placeholder="e.g. bob@dole.com">
   </label>
   <label class="item item-input">
-    <input type="text" placeholder="Password">
+    <span class="input-label">Password</span>
+    <input type="password" ng-model="user.password">
   </label>
+  <button class="button button-full button-positive" ng-click="signIn()">Submit</button>
+  <h3 class="text-center assertive">{{ error.message }}</h3>
+  <h3 ng-if="firebaseUser" class="text-center balanced">Logged as {{ firebaseUser.email }}<h3>
 </div>
 
-<center><a class="button icon icon-right ion-chevron-right" ng-click="loginClicked()">Login</a></center> 
-   <!-- <center><h1 style="color:purple; padding:10px" class="title">
-        Create Event  
-    </h1></center>
-
-        <div class="list">
-          <label class="item item-input item-floating-label">
-            <span class="input-label">
-              Event Name
-            </span>
-            <input style="font-size:20px" type="text" placeholder="Event Name">
-          </label>
-          <label class="item item-input item-floating-label">
-            <span class="input-label">
-              Event Location
-            </span>
-            <input style="font-size:20px" type="text" placeholder="Event Location">
-          </label>
-          <label class="item item-input item-floating-label">
-            <span class="input-label">
-              Start Time
-            </span>
-            <input style="font-size:20px" type="text" placeholder="Encore Start Time">
-          </label>
-        </div>
-
-        <center><a class="button icon icon-right ion-chevron-right" ng-click="nextClicked()">NEXT</a></center> -->
+<!--<center><a class="button icon icon-right ion-chevron-right" ng-click="loginClicked()">Login</a></center>-->
 
 
 
