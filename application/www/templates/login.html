@@ -1,0 +1,24 @@
+<ion-view view-title="Welcome to Encore" >
+  <ion-content>
+<center><img style="padding:10px" src="img/image.jpg" alt=""></center>
+ <div class="list list-inset">
+  <label class="item item-input">
+    <span class="input-label">Email</span>
+      <input type="text" ng-model="user.email" placeholder="e.g. bob@dole.com">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Password</span>
+    <input type="password" ng-model="user.password">
+  </label>
+  <button class="button button-full button-positive" ng-click="signIn()">Submit</button>
+  <button class="button button-full button-assertive" ng-click="createAccount()">New User</button>
+  <h3 class="text-center assertive">{{ error.message }}</h3>
+  <h3 ng-if="firebaseUser" class="text-center balanced">Logged as {{ firebaseUser.email }}<h3>
+</div>
+
+<!--<center><a class="button icon icon-right ion-chevron-right" ng-click="loginClicked()">Login</a></center>-->
+
+
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,59 @@
+<ion-view view-title="Host">
+      <ion-content>
+      
+        <h1 style="padding:10px; color:purple">
+          <center>
+            Poll Setup
+          </center>
+        </h1>
+
+        <div class="list">
+          <label class="item item-input item-floating-label">
+            <b><span class="input-label">
+                Poll Question
+              </span></b>
+            
+            <input style="font-size:15px" type="text" placeholder="Poll Question">
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">
+              Option #1
+            </span>
+            <input style="font-size:15px" type="text" placeholder="Option #1">
+          </label>
+
+          <label class="item item-input item-floating-label">
+            <span class="input-label">
+              Option #2
+            </span>
+            <input style="font-size:15px" type="text" placeholder="Option #2">
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">
+              Option #3
+            </span>
+            <input style="font-size:15px" type="text" placeholder="Option #3">
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">
+              Option #4
+            </span>
+            <input style="font-size:15px" type="text" placeholder="Option #4">
+          </label>
+        </div>
+
+      <center>
+          <a class="button icon icon-left ion-chevron-left" ng-click="backClicked()">BACK</a>
+
+          <a class="button icon icon-right ion-chevron-right" ng-click="submitClicked()">SUBMIT</a>
+       <!-- <button class="button button-large button-assertive">
+          BACK
+        </button>
+       
+        <button class="button button-large button-royal">
+          SUBMIT
+        </button> -->
+      </center>
+
+      </ion-content>
+  </ion-view>
