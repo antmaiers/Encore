@@ -135,17 +135,17 @@ angular.module('starter', ['ionic','firebase'])
   $scope.user = {};
 
   $scope.createAccount = function(){
-      console.log("$scope.user:" + JSON.stringify($scope.user));   
-     $scope.firebaseUser = null;
-      $scope.error = null;
+    console.log("$scope.user:" + JSON.stringify($scope.user));   
+    $scope.firebaseUser = null;
+    $scope.error = null;
 
-     var auth = $firebaseAuth();
+    var auth = $firebaseAuth();
 
-    auth.$createUserWithEmailAndPassword($scope.user.email, $scope.user.password).then(function() {
-    $scope.firebaseUser = firebaseUser;
-    console.log("User created successfully!");
+    auth.$createUserWithEmailAndPassword($scope.user.email, $scope.user.password).then(function(firebaseUser) {
+      $scope.firebaseUser = firebaseUser;
+      console.log("User created successfully!");
     }).catch(function(error) {
-    console.log("Error:", error);
+      console.log("Error:", error);
     });
 
    /* firebase.auth().createUserWithEmailAndPassword($scope.user.email, $scope.user.password).catch(function(error) {
