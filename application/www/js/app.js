@@ -107,17 +107,17 @@ angular.module('starter', ['ionic','firebase'])
     $state.go("create_account")
   };
 
-  //$scope.selectedUser = [];
   console.log($scope.selectedUser);
   $scope.users = [
+    {name: '<--Select-->'},
     {name:'Voter'},
     {name:"Host"} 
   ];
  
-$scope.update = function(item) {
-    $scope.selectedUser = item.name
-    console.log($scope.selectedUser);
-};
+  $scope.update = function(item) {
+      $scope.selectedUser = item.name
+      console.log($scope.selectedUser);
+  };
 
 
   $scope.user = {};
@@ -133,26 +133,20 @@ $scope.update = function(item) {
     auth.$signInWithEmailAndPassword($scope.user.email, $scope.user.password).then(function(firebaseUser) {
       $scope.firebaseUser = firebaseUser;
 
-      //$scope.selectedUser = $scope.users[0];
-        console.log($scope.selectedUser);
-        
-        $timeout(function(){
-
-          $state.go('choose_host_or_voter');
-          }, 2000);
-        /*if($scope.selectedUser == $scope.users[0]){
+        console.log(item.name);
+        if(item.name == $scope.users[1].name){
           $timeout(function(){
 
           $state.go('voter_search');
           }, 2000); 
-        }else if($scope.selectedUser == $scope.users[1]){
+        }else if(item.name == $scope.users[2].name){
           $timeout(function(){
 
           $state.go('host_create_event');
           }, 2000);        
         }else{
           console.log("user not selected properly")
-        }*/
+        }
 
     }).catch(function(error) {
       $scope.error = error;
