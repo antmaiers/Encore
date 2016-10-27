@@ -1,31 +1,95 @@
 <ion-view view-title="Host">
   <ion-content>
-    <center><h1 style="color:purple; padding:10px" class="title">
+    <center><h1 style="color:#6C3483; padding:5px" class="title">
         Create Event
     </h1></center>
 
-        <div class="list">
+        <!--<div class="list">
           <label class="item item-input item-floating-label">
             <span class="input-label">
               Event Name
             </span>
-            <input style="font-size:20px" type="text" placeholder="Event Name">
+            <input type="text" placeholder="Event Name">
           </label>
           <label class="item item-input item-floating-label">
             <span class="input-label">
               Event Location
             </span>
-            <input style="font-size:20px" type="text" placeholder="Event Location">
+            <input type="text" placeholder="Event Location">
           </label>
           <label class="item item-input item-floating-label">
             <span class="input-label">
               Start Time
             </span>
-            <input style="font-size:20px" type="text" placeholder="Encore Start Time">
+            <input type="text" placeholder="Encore Start Time">
           </label>
-        </div>
+          <left><h4 style="color:blue; padding:10px" class="title">
+        Encore Song Options:
+          </h4></left>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">
+              Option 1:
+            </span>
+            <input type="text" placeholder="Option 1">
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">
+              Option 2:
+            </span>
+            <input type="text" placeholder="Option 2">
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">
+              Option 3:
+            </span>
+            <input type="text" placeholder="Option 3">
+          </label>
+        </div>-->
 
-        <center><a class="button icon icon-right ion-chevron-right" ng-click="nextClicked()">NEXT</a></center>
+
+        <div class="list">
+          <label class="item item-input">
+            <span class="input-label">Event Name:</span>
+            <input type="text">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Event Location:</span>
+            <input type="password">
+          </label>
+          <div class="list">
+          <label class="item item-input">
+            <span class="input-label">Encore Start Time:</span>
+            <input type="text">
+          </label>
+
+          <left><h4 style="color:blue; padding:10px" class="title">
+        Encore Song Options:
+          </h4></left>
+
+          <label class="item item-input">
+            <span class="input-label">Song Option 1:</span>
+            <input type="text">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Song Option 2:</span>
+            <input type="text">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Song Option 3:</span>
+            <input type="text">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Song Option 4:</span>
+            <input type="text">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Song Option 5:</span>
+            <input type="text">
+          </label>
+      </div>
+      </div>
+
+        <center><a class="button icon icon-right ion-chevron-right" ng-click="nextClicked()">SUBMIT</a></center>
 
   </ion-content>
 </ion-view>

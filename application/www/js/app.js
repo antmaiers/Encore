@@ -169,7 +169,7 @@ angular.module('starter', ['ionic','firebase'])
 .controller('host_create_event_Ctrl', function($scope, $state) {
   $scope.nextClicked = function(){
     console.log("next clicked");
-    $state.go("host_create_poll")
+    $state.go("host_poll_in_progress")
   };
 })
 
