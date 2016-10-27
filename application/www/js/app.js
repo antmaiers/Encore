@@ -109,16 +109,10 @@ angular.module('starter', ['ionic','firebase'])
 
   console.log($scope.selectedUser);
   $scope.users = [
-    {name: '<--Select-->'},
+    {name: '<---Select--->'},
     {name:'Voter'},
-    {name:"Host"} 
+    {name:"Host"}
   ];
- 
-  $scope.update = function(item) {
-      $scope.selectedUser = item.name
-      console.log($scope.selectedUser);
-  };
-
 
   $scope.user = {};
 
@@ -138,12 +132,12 @@ angular.module('starter', ['ionic','firebase'])
           $timeout(function(){
 
           $state.go('voter_search');
-          }, 2000); 
+          }, 2000);
         }else if(item.name == $scope.users[2].name){
           $timeout(function(){
 
           $state.go('host_create_event');
-          }, 2000);        
+          }, 2000);
         }else{
           console.log("user not selected properly")
         }
@@ -158,7 +152,7 @@ angular.module('starter', ['ionic','firebase'])
   $scope.user = {};
 
   $scope.createAccount = function(){
-    console.log("$scope.user:" + JSON.stringify($scope.user));   
+    console.log("$scope.user:" + JSON.stringify($scope.user));
     $scope.firebaseUser = null;
     $scope.error = null;
 

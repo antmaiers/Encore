@@ -3,8 +3,10 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/App/platforms" />
       <excludeFolder url="file://$MODULE_DIR$/Encore/platforms" />
       <excludeFolder url="file://$MODULE_DIR$/PracticeApp/platforms" />
+      <excludeFolder url="file://$MODULE_DIR$/application/platforms" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
     </content>
