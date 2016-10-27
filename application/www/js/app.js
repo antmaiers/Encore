@@ -224,7 +224,7 @@ angular.module('starter', ['ionic','firebase'])
 .controller('host_poll_results_Ctrl', function($scope, $state){
   $scope.homeClicked = function(){
     console.log("home clicked");
-    $state.go("choose_host_or_voter")
+    $state.go("host_create_event")
   };
 })
 
@@ -251,7 +251,7 @@ angular.module('starter', ['ionic','firebase'])
 .controller('voter_submission_Ctrl', function($scope, $state){
   $scope.homeClicked = function(){
     console.log("home clicked");
-    $state.go("choose_host_or_voter")
+    $state.go("voter_search")
   };
 })
 
