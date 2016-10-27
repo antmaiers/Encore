@@ -165,30 +165,17 @@ angular.module('starter', ['ionic','firebase'])
 })
 
 .controller('host_create_event_Ctrl', function($scope, $state) {
-  $scope.nextClicked = function(){
+  $scope.submitClicked = function(){
     console.log("next clicked");
     $state.go("host_poll_in_progress")
   };
 })
 
-.controller('AccountCtrl', function($scope, $state) {
-  $scope.loginClicked = function(){
-    console.log("login clicked");
-    $state.go("voter_search")
-  };
-})
-
-
 .controller('host_events_management_Ctrl', function($scope, $state){
-  $scope.backClicked = function(){
-    console.log("back clicked");
-    $state.go("login")
-  };
-  $scope.nextClicked = function(){
+  $scope.newEventClicked = function(){
     console.log("next clicked");
     $state.go("host_create_event")
   };
-  //console.log('loaded host_create_poll_Ctrl');
 })
 
 .controller('host_poll_in_progress_Ctrl', function($scope, $state){
@@ -241,3 +228,4 @@ angular.module('starter', ['ionic','firebase'])
     return $firebaseAuth();
   }
 ]);
+
