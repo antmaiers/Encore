@@ -47,19 +47,17 @@ angular.module('starter', ['ionic','firebase'])
     templateUrl: 'templates/create_account.html',
     controller: 'create_account_Ctrl'
   })
+  .state('host_events_management', {
+    url: '/host_events_management',
+    templateUrl: 'templates/events_management.html',
+    controller: 'host_events_management_Ctrl'
+  })
 
   .state('host_create_event', {
     url: '/host_create_event',
     templateUrl: 'templates/host_create_event.html',
     controller: 'host_create_event_Ctrl'
   })
-
-  .state('host_create_poll', {
-    url: '/host_create_poll',
-    templateUrl: 'templates/host_create_poll.html',
-    controller: 'host_create_poll_Ctrl'
-  })
-
   .state('host_poll_in_progress', {
     url: '/host_poll_in_progress',
     templateUrl: 'templates/host_poll_in_progress.html',
@@ -130,7 +128,7 @@ angular.module('starter', ['ionic','firebase'])
         }else if(item.name == $scope.users[2].name){
           $timeout(function(){
 
-          $state.go('host_create_event');
+          $state.go('host_events_management');
           }, 2000);
         }else{
           console.log("user not selected properly")
@@ -181,14 +179,14 @@ angular.module('starter', ['ionic','firebase'])
 })
 
 
-.controller('host_create_poll_Ctrl', function($scope, $state){
+.controller('host_events_management_Ctrl', function($scope, $state){
   $scope.backClicked = function(){
     console.log("back clicked");
-    $state.go("host_create_event")
+    $state.go("login")
   };
-  $scope.submitClicked = function(){
-    console.log("submit clicked");
-    $state.go("host_poll_in_progress")
+  $scope.nextClicked = function(){
+    console.log("next clicked");
+    $state.go("host_create_event")
   };
   //console.log('loaded host_create_poll_Ctrl');
 })
@@ -207,7 +205,7 @@ angular.module('starter', ['ionic','firebase'])
 .controller('host_poll_results_Ctrl', function($scope, $state){
   $scope.homeClicked = function(){
     console.log("home clicked");
-    $state.go("host_create_event")
+    $state.go("host_events_management")
   };
 })
 
