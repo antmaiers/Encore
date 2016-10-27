@@ -41,12 +41,6 @@ angular.module('starter', ['ionic','firebase'])
       controller: 'loginCtrl'
     })
 
-  .state('choose_host_or_voter', {
-    url: '/choose_host_or_voter',
-    templateUrl: 'templates/choose_host_or_voter.html',
-    controller: 'choose_host_or_voter_Ctrl'
-  })
-
   .state('create_account', {
     cache: false,
     url: '/create_account',
@@ -169,17 +163,6 @@ angular.module('starter', ['ionic','firebase'])
     }).catch(function(error) {
       console.log("Error:", error);
     });
-  };
-})
-
-.controller('choose_host_or_voter_Ctrl', function($scope, $state) {
-  $scope.voterClicked = function(){
-    console.log("voter clicked");
-    $state.go("voter_search")
-  };
-  $scope.hostClicked = function(){
-    console.log("host clicked");
-    $state.go("host_create_event")
   };
 })
 
