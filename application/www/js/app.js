@@ -200,6 +200,11 @@ angular.module('starter', ['ionic','firebase'])
   };
 
   $scope.events = Events;
+
+  $scope.startClicked = function(){
+    console.log("submit clicked");
+    $state.go("host_poll_in_progress")
+  };
 })
 
 .controller('host_poll_in_progress_Ctrl', function($scope, $state){
@@ -208,6 +213,8 @@ angular.module('starter', ['ionic','firebase'])
     $state.go("host_poll_results")
   };
 })
+
+<!---->
 
 .controller('host_poll_results_Ctrl', function($scope, $state){
   $scope.homeClicked = function(){
@@ -249,6 +256,7 @@ angular.module('starter', ['ionic','firebase'])
     }
   ])
 
+  
   .factory("Events", ["$firebaseArray",
     function($firebaseArray) {
       // create a reference to the database where we will store our data
@@ -257,4 +265,7 @@ angular.module('starter', ['ionic','firebase'])
       return $firebaseArray(ref.child("Events"));
     }
   ]);
+
+
+
 

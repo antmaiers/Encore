@@ -1,20 +1,23 @@
 ﻿
-<ion-view view-title="Host">
+<ion-view view-title="HOST: Encore Voting in Progress">
           <ion-content padding="true" class="has-header">
               
 
-              <div style="margin-right:-20px;">
+              <!--<div style="margin-right:-20px;">
                   <button style="left:-10px;font-weight:600;font-size:40px;border-radius:0px 0px 0px 0px;" class="button button-assertive button-large button-full icon-right ion-android-alarm-clock">POLL RUNNING</button>
               </div>
 
 
-            <!-- <div class="button-bar"> -->
+            <div class="button-bar"> 
             <center>
                   <button class="button button-large button-royal" ng-click="stopClicked()">STOP</button>
             </center>
 
-                 <!-- <button class="button button-positive  button-block" ng-click="autoClicked()">Auto-setup</button>
+                 <button class="button button-positive  button-block" ng-click="autoClicked()">Auto-setup</button>
               </div>-->
+
+        <timer interval="1000" countdown="100">{{countdown}}</timer>
+
 
 
           </ion-content>
