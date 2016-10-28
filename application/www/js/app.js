@@ -54,6 +54,7 @@ angular.module('starter', ['ionic','firebase'])
   })
 
   .state('host_create_event', {
+    cache: false,
     url: '/host_create_event',
     templateUrl: 'templates/host_create_event.html',
     controller: 'host_create_event_Ctrl'
