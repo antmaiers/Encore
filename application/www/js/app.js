@@ -228,7 +228,7 @@ angular.module('starter', ['ionic','firebase'])
 .controller('voter_vote_Ctrl', function($scope, $state){
     $scope.backClicked = function(){
     console.log("back clicked");
-    $state.go("tab.account")
+    $state.go("voter_search")
   };
 
     $scope.submitClicked = function(){
