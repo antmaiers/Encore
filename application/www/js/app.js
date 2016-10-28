@@ -165,10 +165,31 @@ angular.module('starter', ['ionic','firebase'])
   };
 })
 
-.controller('host_create_event_Ctrl', function($scope, $state) {
-  $scope.submitClicked = function(){
-    console.log("next clicked");
+.controller('host_create_event_Ctrl', function($scope, $state, Events) {
+  $scope.submitClicked = function(item){
+    console.log("submit clicked");
     $state.go("host_poll_in_progress")
+
+
+    $scope.event =
+    {eventName: item.eventName,
+      eventLocation: item.eventLocation,
+      eventTime: item.eventTime,
+      option1: item.option1,
+      option2: item.option2,
+      option3: item.option3,
+      option4: item.option4 };
+
+    console.log($scope.event.eventName);
+    console.log($scope.event.eventLocation);
+    console.log($scope.event.eventTime);
+    console.log($scope.event.option1);
+    console.log($scope.event.option2);
+    console.log($scope.event.option3);
+    console.log($scope.event.option4);
+
+    Events.$add($scope.event);
+
   };
 })
 
@@ -224,9 +245,18 @@ angular.module('starter', ['ionic','firebase'])
   };
 })
 
-.factory("Auth", ["$firebaseAuth",
-  function($firebaseAuth) {
-    return $firebaseAuth();
-  }
-]);
+  .factory("Auth", ["$firebaseAuth",
+    function($firebaseAuth) {
+      return $firebaseAuth();
+    }
+  ])
+
+  .factory("Events", ["$firebaseArray",
+    function($firebaseArray) {
+      // create a reference to the database where we will store our data
+      var ref = firebase.database().ref();
+
+      return $firebaseArray(ref.child("Events"));
+    }
+  ]);
 
