@@ -8,4 +8,4 @@ Beginning with the Host login: once logged in, a list of current events created 
 Now, logging in as a Voter: the Voter will be taken to a page with a list of current events and has the choice to select one. After selecting the preferred event, the voter now sees the list of song options that the host provided; the voter could select one and submit.
 
 
-ISSUES: 
+ISSUES: The Host event input can be saved to the firebase array, but we are continuing to work on accessing and displaying it. We are also still working on the voter being able to view this information that the host inputs. Also, once this information is accessible we will be able to conduct the voter statistics.
