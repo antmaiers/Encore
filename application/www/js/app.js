@@ -193,21 +193,19 @@ angular.module('starter', ['ionic','firebase'])
   };
 })
 
-.controller('host_events_management_Ctrl', function($scope, $state){
+.controller('host_events_management_Ctrl', function($scope, $state, Events){
   $scope.newEventClicked = function(){
     console.log("next clicked");
     $state.go("host_create_event")
   };
+
+  $scope.events = Events;
 })
 
 .controller('host_poll_in_progress_Ctrl', function($scope, $state){
   $scope.stopClicked = function(){
     console.log("stop clicked");
     $state.go("host_poll_results")
-  };
-  $scope.autoClicked = function(){
-    console.log("auto clicked");
-    //$state.go("")
   };
 })
 
