@@ -168,7 +168,7 @@ angular.module('starter', ['ionic','firebase'])
 .controller('host_create_event_Ctrl', function($scope, $state, Events) {
   $scope.submitClicked = function(item){
     console.log("submit clicked");
-    $state.go("host_poll_in_progress")
+    $state.go("host_events_management")
 
 
     $scope.event =
