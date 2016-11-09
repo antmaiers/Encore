@@ -205,6 +205,13 @@ angular.module('starter', ['ionic','firebase'])
     console.log("submit clicked");
     $state.go("host_poll_in_progress")
   };
+
+  $scope.deleteItem = function(x){
+    $scope.events.$remove(x);
+
+  };
+
+
 })
 
 .controller('host_poll_in_progress_Ctrl', function($scope, $state){
@@ -214,7 +221,7 @@ angular.module('starter', ['ionic','firebase'])
   };
 })
 
-<!---->
+
 
 .controller('host_poll_results_Ctrl', function($scope, $state){
   $scope.homeClicked = function(){

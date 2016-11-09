@@ -11,10 +11,19 @@
    <ul class="list">
      <li ng-repeat="x in events" class="item item-button-right">
        {{ x.eventName }}
-       <button class="button button-small button-royal icon icon-right ion-clock" ng-click="startClicked()"> START
-       </button>
+
+
+
+     <right><button class="button button-small button-royal icon icon-right ion-clock" ng-click="startClicked()"> START
+     </button>
+
+       <button ng-click="deleteItem(x)" class="button button-small button-assertive ion-trash-a"></button></right>
+
+    
      </li>
    </ul>
+
+
 
     <center><a class="button button-royal icon icon-right ion-plus-circled" ng-click="newEventClicked()">Create New Event</a></center>
 
