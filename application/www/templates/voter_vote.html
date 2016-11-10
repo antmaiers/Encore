@@ -6,29 +6,29 @@
                   Make Your Vote
                 </center>
             </h1>
-            <center><h3 style="color:blueviolet;">"Event Name"</h3></center>
+            <center><h3 style="color:blueviolet;">{{ currentEvent.eventName }}</h3></center>
 
 
             <ion-list style="padding:0px 10px 0px">
                 <ion-radio ng-model="choice" ng-value="1">
                     <i class="icon ion-music-note"></i>
                     <span class="item-note">Select</span>
-                    Option 1
+                    {{ currentEvent.option1 }}
                 </ion-radio>
                 <ion-radio ng-model="choice" ng-value="1">
                     <i class="icon ion-music-note"></i>
                     <span class="item-note">Select</span>
-                    Option 2
+                    {{ currentEvent.option2 }}
                 </ion-radio>
                 <ion-radio ng-model="choice" ng-value="1">
                     <i class="icon ion-music-note"></i>
                     <span class="item-note">Select</span>
-                    Option 3
+                    {{ currentEvent.option3 }}
                 </ion-radio>
                 <ion-radio ng-model="choice" ng-value="1">
                     <i class="icon ion-music-note"></i>
                     <span class="item-note">Select</span>
-                    Option 4
+                    {{ currentEvent.option4 }}
                 </ion-radio>
   
             </ion-list>

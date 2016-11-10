@@ -203,7 +203,7 @@ angular.module('starter', ['ionic','firebase'])
 
   $scope.startClicked = function(item){
     console.log("select clicked for event: " + item.eventName);
-    console.log("submit clicked");
+    //console.log("submit clicked");
     $state.go("host_poll_in_progress")
   };
 
@@ -231,7 +231,7 @@ angular.module('starter', ['ionic','firebase'])
   };
 })
 
-.controller('voter_search_Ctrl', function($scope, $state, Events){
+.controller('voter_search_Ctrl', function($scope, $rootScope, $state, Events){
   $scope.searchClicked = function(){
     console.log("search clicked");
     $state.go("voter_vote")
@@ -241,12 +241,18 @@ angular.module('starter', ['ionic','firebase'])
 
   $scope.selectClicked = function(x){
       console.log("select clicked for event: " + x.eventName);
+      $rootScope.currentEvent = x;
+      //myService.set(x);
+      $state.go("voter_vote")
 
   };
 
 })
 
-.controller('voter_vote_Ctrl', function($scope, $state){
+.controller('voter_vote_Ctrl', function($scope, $rootScope, $state){
+    
+    console.log("Currentevent: "+$rootScope.currentEvent.eventName);
+
     $scope.backClicked = function(){
     console.log("back clicked");
     $state.go("voter_search")
