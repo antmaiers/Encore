@@ -201,7 +201,8 @@ angular.module('starter', ['ionic','firebase'])
 
   $scope.events = Events;
 
-  $scope.startClicked = function(){
+  $scope.startClicked = function(item){
+    console.log("select clicked for event: " + item.eventName);
     console.log("submit clicked");
     $state.go("host_poll_in_progress")
   };
@@ -230,11 +231,19 @@ angular.module('starter', ['ionic','firebase'])
   };
 })
 
-.controller('voter_search_Ctrl', function($scope, $state){
+.controller('voter_search_Ctrl', function($scope, $state, Events){
   $scope.searchClicked = function(){
     console.log("search clicked");
     $state.go("voter_vote")
   };
+
+  $scope.events = Events;
+
+  $scope.selectClicked = function(item){
+      console.log("select clicked for event: " + item.eventName);
+
+  };
+
 })
 
 .controller('voter_vote_Ctrl', function($scope, $state){
@@ -257,22 +266,21 @@ angular.module('starter', ['ionic','firebase'])
   };
 })
 
-  .factory("Auth", ["$firebaseAuth",
-    function($firebaseAuth) {
-      return $firebaseAuth();
-    }
-  ])
+.factory("Auth", ["$firebaseAuth",
+  function($firebaseAuth) {
+    return $firebaseAuth();
+  }
+])
 
   
-  .factory("Events", ["$firebaseArray",
-    function($firebaseArray) {
-      // create a reference to the database where we will store our data
-      var ref = firebase.database().ref();
+.factory("Events", ["$firebaseArray",
+  function($firebaseArray) {
+    // create a reference to the database where we will store our data
+    var ref = firebase.database().ref();
 
-      return $firebaseArray(ref.child("Events"));
-    }
-  ]);
-
+    return $firebaseArray(ref.child("Events"));
+  }
+]);
 
 
 

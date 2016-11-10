@@ -13,27 +13,17 @@
      </div>
 
 
- <div class="list">
-    <div class="item item-divider">
-      Choose your event:
-    </div>
+   <ul class="list">
+     <li ng-repeat="x in events" class="item item-button-right">
+       {{ x.eventName }}
 
-    <a class="item" href="">
-      Event 1
-    </a>
+        <button class="button button-small button-royal" ng-click="selectClicked(x)"> 
+          Select
+        </button>
 
-    <a class="item" href="">
-      Event 2
-    </a>
-
-    <a class="item" href="">
-      Event 3
-    </a>
-
-    <a class="item" href="">
-      Event 4
-    </a>
-  </div>
+    
+     </li>
+   </ul>
 
 
 
