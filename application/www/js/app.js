@@ -239,8 +239,8 @@ angular.module('starter', ['ionic','firebase'])
 
   $scope.events = Events;
 
-  $scope.selectClicked = function(item){
-      console.log("select clicked for event: " + item.eventName);
+  $scope.selectClicked = function(x){
+      console.log("select clicked for event: " + x.eventName);
 
   };
 
