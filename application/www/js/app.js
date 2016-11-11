@@ -109,6 +109,7 @@ angular.module('starter', ['ionic','firebase'])
 
   $scope.user = {};
 
+
   $scope.signIn = function(item){
     console.log("$scope.user:" + JSON.stringify($scope.user));
 
@@ -117,27 +118,39 @@ angular.module('starter', ['ionic','firebase'])
 
     var auth = $firebaseAuth();
 
-    auth.$signInWithEmailAndPassword($scope.user.email, $scope.user.password).then(function(firebaseUser) {
-      $scope.firebaseUser = firebaseUser;
+    $scope.isUserTypeSelected = function(userSelected){
+      selected = false;
+      if (userSelected != $scope.users[0]){
+        $scope.selected = true;
+      }
+      return $scope.selected;
+    }
 
-        console.log(item.name);
-        if(item.name == $scope.users[1].name){
-          $timeout(function(){
+    if ($scope.selected == true){
+      auth.$signInWithEmailAndPassword($scope.user.email, $scope.user.password).then(function(firebaseUser) {
+        $scope.firebaseUser = firebaseUser;
 
-          $state.go('voter_search');
-          }, 2000);
-        }else if(item.name == $scope.users[2].name){
-          $timeout(function(){
+          console.log(item.name);
+          if(item.name == $scope.users[1].name){
+            $timeout(function(){
 
-          $state.go('host_events_management');
-          }, 2000);
-        }else{
-          console.log("user not selected properly")
-        }
+            $state.go('voter_search');
+            }, 2000);
+          }else if(item.name == $scope.users[2].name){
+            $timeout(function(){
 
-    }).catch(function(error) {
-      $scope.error = error;
-    });
+            $state.go('host_events_management');
+            }, 2000);
+          }else{
+            console.log("user not selected properly")
+          }
+
+      }).catch(function(error) {
+        $scope.error = error;
+      });
+    }else{
+      $scope.msg = "Please Select User Type.";
+    }
   };
 })
 
@@ -151,12 +164,12 @@ angular.module('starter', ['ionic','firebase'])
 
     var auth = $firebaseAuth();
 
+
     $scope.passwordsMatch = function(){
       $scope.match = false;
       if ($scope.user.password == $scope.user.confirmPassword){
         $scope.match = true;
       }
-
       return $scope.match;
     }
 
