@@ -193,7 +193,7 @@ angular.module('starter', ['ionic','firebase'])
   };
 })
 
-.controller('host_events_management_Ctrl', function($scope, $state, Events){
+.controller('host_events_management_Ctrl', function($scope, $rootScope, $state, Events){
   $scope.newEventClicked = function(){
     console.log("next clicked");
     $state.go("host_create_event")
@@ -201,9 +201,10 @@ angular.module('starter', ['ionic','firebase'])
 
   $scope.events = Events;
 
-  $scope.startClicked = function(item){
-    console.log("select clicked for event: " + item.eventName);
+  $scope.startClicked = function(x){
+    console.log("select clicked for event: " + x.eventName);
     //console.log("submit clicked");
+    $rootScope.currentEvent = x;
     $state.go("host_poll_in_progress")
   };
 
@@ -224,7 +225,11 @@ angular.module('starter', ['ionic','firebase'])
 
 
 
-.controller('host_poll_results_Ctrl', function($scope, $state){
+.controller('host_poll_results_Ctrl', function($scope, $rootScope, $state){
+  
+  console.log("Currentevent: "+$rootScope.currentEvent.eventName);
+
+
   $scope.homeClicked = function(){
     console.log("home clicked");
     $state.go("host_events_management")
