@@ -122,7 +122,6 @@ angular.module('starter', ['ionic','firebase'])
       auth.$signInWithEmailAndPassword($scope.user.email, $scope.user.password).then(function(firebaseUser) {
         $scope.firebaseUser = firebaseUser;
 
-          console.log(item.name);
           if(item.name == $scope.users[1].name){
             $timeout(function(){
 
@@ -252,14 +251,13 @@ angular.module('starter', ['ionic','firebase'])
   
   console.log("Currentevent: "+$rootScope.currentEvent.eventName);
 
-
   $scope.homeClicked = function(){
     console.log("home clicked");
     $state.go("host_events_management")
   };
 })
 
-.controller('voter_search_Ctrl', function($scope, $rootScope, $state, Events){
+.controller('voter_search_Ctrl', function($scope, $rootScope, $firebaseObject, $state, Events){
   $scope.searchClicked = function(){
     console.log("search clicked");
     $state.go("voter_vote")
@@ -272,18 +270,16 @@ angular.module('starter', ['ionic','firebase'])
       console.log("votes: " + x.votes);
 
       $rootScope.currentEvent = x;
-      //myService.set(x);
+
       $state.go("voter_vote")
-
   };
-
 })
 
 .controller('voter_vote_Ctrl', function($scope, $rootScope, $state){
     
-    console.log("Currentevent: "+$rootScope.currentEvent.eventName);
+  console.log("Currentevent: "+$rootScope.currentEvent.eventName);
 
-    $scope.backClicked = function(){
+  $scope.backClicked = function(){
     console.log("back clicked");
     $state.go("voter_search")
   };
@@ -301,10 +297,7 @@ angular.module('starter', ['ionic','firebase'])
     }else if (vote == 4){
       $rootScope.currentEvent.option4_votes++;
     }
-
-
   };
-  //console.log('loaded voter_vote_Ctrl');
 })
 
 .controller('voter_submission_Ctrl', function($scope, $state){
