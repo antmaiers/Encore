@@ -118,14 +118,6 @@ angular.module('starter', ['ionic','firebase'])
 
     var auth = $firebaseAuth();
 
-    $scope.isUserTypeSelected = function(userSelected){
-      selected = false;
-      if (userSelected != $scope.users[0]){
-        $scope.selected = true;
-      }
-      return $scope.selected;
-    }
-
     if ($scope.selected == true){
       auth.$signInWithEmailAndPassword($scope.user.email, $scope.user.password).then(function(firebaseUser) {
         $scope.firebaseUser = firebaseUser;
@@ -152,6 +144,14 @@ angular.module('starter', ['ionic','firebase'])
       $scope.msg = "Please Select User Type.";
     }
   };
+
+  $scope.isUserTypeSelected = function(userSelected){
+    selected = false;
+    if (userSelected != $scope.users[0]){
+      $scope.selected = true;
+    }
+    return $scope.selected;
+  }
 })
 
 .controller('create_account_Ctrl', function($scope, $firebaseAuth, $timeout, $state) {
@@ -163,16 +163,6 @@ angular.module('starter', ['ionic','firebase'])
     $scope.error = null;
 
     var auth = $firebaseAuth();
-
-
-    $scope.passwordsMatch = function(){
-      $scope.match = false;
-      if ($scope.user.password == $scope.user.confirmPassword){
-        $scope.match = true;
-      }
-      return $scope.match;
-    }
-
 
     if ($scope.match == true){    
       auth.$createUserWithEmailAndPassword($scope.user.email, $scope.user.password).then(function(firebaseUser) {
@@ -192,6 +182,14 @@ angular.module('starter', ['ionic','firebase'])
       $scope.msg = "Passwords MUST Match.";
     }
   };
+
+  $scope.passwordsMatch = function(){
+    $scope.match = false;
+    if ($scope.user.password == $scope.user.confirmPassword){
+      $scope.match = true;
+    }
+    return $scope.match;
+  }
 })
 
 .controller('host_create_event_Ctrl', function($scope, $state, Events) {
