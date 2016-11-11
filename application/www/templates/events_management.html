@@ -10,12 +10,13 @@
 
    <ul class="list">
      <li ng-repeat="x in events" class="item item-button-right">
-       {{ x.eventName }}
+       <div style="font-size:20px"><b>{{ x.eventName }}</b></div>
+       <div>{{ x.eventLocation }}, {{ x.eventTime }}</div>
+       <div>{{ x.option1 }}, {{ x.option2 }}, {{ x.option3 }} , {{ x.option4 }}</div>
 
 
-
-     <button class="button button-small button-royal icon icon-right ion-clock" ng-click="startClicked(x)"> START
-     </button>
+       <button class="button button-small button-royal icon icon-right ion-clock" ng-click="startClicked(x)"> Start Event
+       </button>
 
       <!-- <button ng-click="deleteItem(x)" class="button button-small button-assertive ion-trash-a"></button> -->
 
