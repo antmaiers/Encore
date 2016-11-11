@@ -13,10 +13,16 @@
         <span class="input-label">Password</span>
         <input type="password" ng-model="user.password">
       </label>
+      <label class="item item-input">
+        <span class="input-label">Password</span>
+        <input type="password" ng-model="user.confirmPassword">
+      </label>
 
       <button class="button button-full button-positive" ng-click="createAccount()">Create Account</button>
 
       <h3 class="text-center assertive">{{ error.message }}</h3>
+      <!--<h3 class="text-center assertive">{{ msg }}</h3>-->
+      <h3 ng-hide="passwordsMatch()" class="text-center assertive"> {{ msg }} </h3>
       <h3 ng-if="firebaseUser" class="text-center balanced">Created Account for {{ firebaseUser.email }}<h3>
 
     </div>

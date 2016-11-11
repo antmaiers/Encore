@@ -151,17 +151,33 @@ angular.module('starter', ['ionic','firebase'])
 
     var auth = $firebaseAuth();
 
-    auth.$createUserWithEmailAndPassword($scope.user.email, $scope.user.password).then(function(firebaseUser) {
-      $scope.firebaseUser = firebaseUser;
-      console.log("User created successfully!");
+    $scope.passwordsMatch = function(){
+      $scope.match = false;
+      if ($scope.user.password == $scope.user.confirmPassword){
+        $scope.match = true;
+      }
 
-        $timeout(function(){
-          $state.go('login');
-        }, 2000);
+      return $scope.match;
+    }
 
-    }).catch(function(error) {
-      console.log("Error:", error);
-    });
+
+    if ($scope.match == true){    
+      auth.$createUserWithEmailAndPassword($scope.user.email, $scope.user.password).then(function(firebaseUser) {
+        $scope.firebaseUser = firebaseUser;
+        console.log("User created successfully!");
+
+          $timeout(function(){
+            $state.go('login');
+          }, 2000);
+
+      }).catch(function(error) {
+        console.log("Error:", error);
+        $scope.error = error;
+      });
+
+    }else{
+      $scope.msg = "Passwords MUST Match.";
+    }
   };
 })
 
