@@ -17,7 +17,10 @@
      <li ng-repeat="x in events" class="item item-button-right">
        <div style="font-size:20px"><b>{{ x.eventName }}</b></div>
        <div>{{ x.eventLocation }}, {{ x.eventTime }}</div>
-       <div>{{ x.option1 }}, {{ x.option2 }}, {{ x.option3 }} , {{ x.option4 }}</div>
+       <div>{{ x.option1 }} ({{ x.option1_votes }}), 
+            {{ x.option2 }} ({{ x.option2_votes }}), 
+            {{ x.option3 }} ({{ x.option3_votes }}), 
+            {{ x.option4 }} ({{ x.option4_votes }})</div>
 
         <button style="padding:15px" class="button button-small button-royal" ng-click="selectClicked(x)"> 
           Select

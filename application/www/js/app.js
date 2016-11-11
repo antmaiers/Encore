@@ -205,15 +205,11 @@ angular.module('starter', ['ionic','firebase'])
       option1: item.option1,
       option2: item.option2,
       option3: item.option3,
-      option4: item.option4 };
-
-    console.log($scope.event.eventName);
-    console.log($scope.event.eventLocation);
-    console.log($scope.event.eventTime);
-    console.log($scope.event.option1);
-    console.log($scope.event.option2);
-    console.log($scope.event.option3);
-    console.log($scope.event.option4);
+      option4: item.option4,
+      option1_votes: 0,
+      option2_votes: 0,
+      option3_votes: 0,
+      option4_votes: 0        };
 
     Events.$add($scope.event);
 
@@ -273,6 +269,8 @@ angular.module('starter', ['ionic','firebase'])
 
   $scope.selectClicked = function(x){
       console.log("select clicked for event: " + x.eventName);
+      console.log("votes: " + x.votes);
+
       $rootScope.currentEvent = x;
       //myService.set(x);
       $state.go("voter_vote")
@@ -290,9 +288,21 @@ angular.module('starter', ['ionic','firebase'])
     $state.go("voter_search")
   };
 
-    $scope.submitClicked = function(){
+    $scope.submitClicked = function(vote){
     console.log("submit clicked");
     $state.go("voter_submission")
+
+    if(vote == 1){
+      $rootScope.currentEvent.option1_votes++;
+    }else if (vote == 2){
+      $rootScope.currentEvent.option2_votes++;
+    }else if (vote == 3){
+      $rootScope.currentEvent.option3_votes++;
+    }else if (vote == 4){
+      $rootScope.currentEvent.option4_votes++;
+    }
+
+
   };
   //console.log('loaded voter_vote_Ctrl');
 })
