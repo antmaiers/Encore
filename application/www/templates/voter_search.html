@@ -15,9 +15,11 @@
 
    <ul class="list">
      <li ng-repeat="x in events" class="item item-button-right">
-       {{ x.eventName }} ( {{ x.eventTime }} )
+       <div style="font-size:20px"><b>{{ x.eventName }}</b></div>
+       <div>{{ x.eventLocation }}, {{ x.eventTime }}</div>
+       <div>{{ x.option1 }}, {{ x.option2 }}, {{ x.option3 }} , {{ x.option4 }}</div>
 
-        <button class="button button-small button-royal" ng-click="selectClicked(x)"> 
+        <button style="padding:15px" class="button button-small button-royal" ng-click="selectClicked(x)"> 
           Select
         </button>
 
