@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0e0decf-44d2-45c5-b7f9-bba98abdcc27" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/www/js/app.js" afterPath="$PROJECT_DIR$/application/www/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/www/templates/create_account.html" afterPath="$PROJECT_DIR$/application/www/templates/create_account.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/www/templates/events_management.html" afterPath="$PROJECT_DIR$/application/www/templates/events_management.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/www/templates/voter_vote.html" afterPath="$PROJECT_DIR$/application/www/templates/voter_vote.html" />
     </list>
     <ignored path="Encore.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +29,7 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/www/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
+            <state relative-caret-position="-814">
               <caret line="160" column="22" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
               <folding>
                 <marker date="1479251460000" expanded="true" signature="2963:3233" ph="{...}" />
@@ -39,7 +38,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create_account.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="create_account.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/www/templates/create_account.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
@@ -54,8 +53,18 @@
       <file leaf-file-name="voter_search.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/www/templates/voter_search.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="89" selection-start-line="28" selection-start-column="89" selection-end-line="28" selection-end-column="89" />
+            <state relative-caret-position="360">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="31" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="events_management.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/www/templates/events_management.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -64,8 +73,8 @@
       <file leaf-file-name="voter_vote.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/www/templates/voter_vote.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+            <state relative-caret-position="465">
+              <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -93,13 +102,13 @@
       <list>
         <option value="$PROJECT_DIR$/application/www/templates/login.html" />
         <option value="$PROJECT_DIR$/application/www/templates/host_poll_results.html" />
-        <option value="$PROJECT_DIR$/application/www/templates/events_management.html" />
         <option value="$PROJECT_DIR$/application/www/templates/host_create_event.html" />
         <option value="$PROJECT_DIR$/application/www/index.html" />
         <option value="$PROJECT_DIR$/application/www/templates/voter_search.html" />
-        <option value="$PROJECT_DIR$/application/www/templates/voter_vote.html" />
         <option value="$PROJECT_DIR$/application/www/js/app.js" />
         <option value="$PROJECT_DIR$/application/www/templates/create_account.html" />
+        <option value="$PROJECT_DIR$/application/www/templates/voter_vote.html" />
+        <option value="$PROJECT_DIR$/application/www/templates/events_management.html" />
       </list>
     </option>
   </component>
@@ -312,12 +321,12 @@
       <workItem from="1477514750686" duration="50000" />
       <workItem from="1477576820065" duration="595000" />
       <workItem from="1477603876876" duration="4523000" />
-      <workItem from="1479248776243" duration="2634000" />
+      <workItem from="1479248776243" duration="3186000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8299000" />
+    <option name="totallyTimeSpent" value="8851000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="23" width="962" height="1001" extended-state="0" />
@@ -407,10 +416,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding>
-            <marker date="1478899003000" expanded="true" signature="780:945" ph="..." />
-            <marker date="1478899003000" expanded="true" signature="780:949" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -462,17 +468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/www/templates/events_management.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding>
-            <marker date="1478899003000" expanded="true" signature="780:945" ph="..." />
-            <marker date="1478899003000" expanded="true" signature="780:949" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/www/templates/host_create_event.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1380">
@@ -486,32 +481,6 @@
         <state relative-caret-position="855">
           <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/www/templates/voter_search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="89" selection-start-line="28" selection-start-column="89" selection-end-line="28" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/www/templates/voter_vote.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="160" column="22" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
-          <folding>
-            <marker date="1479251460000" expanded="true" signature="2963:3233" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -532,6 +501,40 @@
           <folding>
             <element signature="n#style#0;n#h1#0;n#center#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/www/templates/voter_vote.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/www/templates/voter_search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="31" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-814">
+          <caret line="160" column="22" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
+          <folding>
+            <marker date="1479251460000" expanded="true" signature="2963:3233" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/www/templates/events_management.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
