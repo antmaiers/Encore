@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0e0decf-44d2-45c5-b7f9-bba98abdcc27" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/www/js/app.js" afterPath="$PROJECT_DIR$/application/www/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/www/templates/voter_search.html" afterPath="$PROJECT_DIR$/application/www/templates/voter_search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/www/templates/voter_vote.html" afterPath="$PROJECT_DIR$/application/www/templates/voter_vote.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/www/templates/create_account.html" afterPath="$PROJECT_DIR$/application/www/templates/create_account.html" />
     </list>
     <ignored path="Encore.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,13 +27,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/www/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="671">
-              <caret line="303" column="34" selection-start-line="303" selection-start-column="34" selection-end-line="303" selection-end-column="34" />
+            <state relative-caret-position="296">
+              <caret line="160" column="22" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
               <folding>
-                <marker date="1479250475000" expanded="true" signature="2963:3233" ph="{...}" />
+                <marker date="1479251460000" expanded="true" signature="2963:3233" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_account.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/www/templates/create_account.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+              <folding>
+                <element signature="n#style#0;n#h1#0;n#center#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,8 +74,8 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/www/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="60" />
+            <state relative-caret-position="45">
+              <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#center#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
               </folding>
@@ -88,6 +99,7 @@
         <option value="$PROJECT_DIR$/application/www/templates/voter_search.html" />
         <option value="$PROJECT_DIR$/application/www/templates/voter_vote.html" />
         <option value="$PROJECT_DIR$/application/www/js/app.js" />
+        <option value="$PROJECT_DIR$/application/www/templates/create_account.html" />
       </list>
     </option>
   </component>
@@ -300,12 +312,12 @@
       <workItem from="1477514750686" duration="50000" />
       <workItem from="1477576820065" duration="595000" />
       <workItem from="1477603876876" duration="4523000" />
-      <workItem from="1479248776243" duration="1450000" />
+      <workItem from="1479248776243" duration="2634000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7115000" />
+    <option name="totallyTimeSpent" value="8299000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="23" width="962" height="1001" extended-state="0" />
@@ -370,7 +382,7 @@
         <state relative-caret-position="2655">
           <caret line="177" column="4" selection-start-line="177" selection-start-column="4" selection-end-line="177" selection-end-column="4" />
           <folding>
-            <marker date="1479250475000" expanded="true" signature="2963:3233" ph="{...}" />
+            <marker date="1479251460000" expanded="true" signature="2963:3233" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -485,24 +497,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/www/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="60" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#center#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/www/templates/create_account.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/www/templates/voter_vote.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -513,10 +507,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/www/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="303" column="34" selection-start-line="303" selection-start-column="34" selection-end-line="303" selection-end-column="34" />
+        <state relative-caret-position="296">
+          <caret line="160" column="22" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
           <folding>
-            <marker date="1479250475000" expanded="true" signature="2963:3233" ph="{...}" />
+            <marker date="1479251460000" expanded="true" signature="2963:3233" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/www/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#center#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/www/templates/create_account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#center#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

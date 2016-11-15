@@ -156,6 +156,11 @@ angular.module('starter', ['ionic','firebase'])
 .controller('create_account_Ctrl', function($scope, $firebaseAuth, $timeout, $state) {
   $scope.user = {};
 
+  $scope.backClicked = function(){
+    console.log("back clicked");
+    $state.go("login")
+  };
+
   $scope.createAccount = function(){
     console.log("$scope.user:" + JSON.stringify($scope.user));
     $scope.firebaseUser = null;
