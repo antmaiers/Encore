@@ -163,7 +163,7 @@ angular.module('starter', ['ionic','firebase'])
 
     var auth = $firebaseAuth();
 
-    if ($scope.match == true){    
+    if ($scope.match == true){
       auth.$createUserWithEmailAndPassword($scope.user.email, $scope.user.password).then(function(firebaseUser) {
         $scope.firebaseUser = firebaseUser;
         console.log("User created successfully!");
@@ -248,7 +248,7 @@ angular.module('starter', ['ionic','firebase'])
 
 
 .controller('host_poll_results_Ctrl', function($scope, $rootScope, $state){
-  
+
   console.log("Currentevent: "+$rootScope.currentEvent.eventName);
 
   $scope.homeClicked = function(){
@@ -260,12 +260,12 @@ angular.module('starter', ['ionic','firebase'])
 .controller('voter_search_Ctrl', function($scope, $rootScope, $firebaseObject, $state, Events){
   $scope.searchClicked = function(){
     console.log("search clicked");
-    $state.go("voter_vote")
+    //$state.go("voter_vote")
   };
 
   $scope.events = Events;
 
-  $scope.selectClicked = function(x){
+  $scope.voteClicked = function(x){
       console.log("select clicked for event: " + x.eventName);
       console.log("votes: " + x.votes);
 
@@ -275,8 +275,8 @@ angular.module('starter', ['ionic','firebase'])
   };
 })
 
-.controller('voter_vote_Ctrl', function($scope, $rootScope, $state){
-    
+.controller('voter_vote_Ctrl', function($scope, $rootScope, $state, $timeout){
+
   console.log("Currentevent: "+$rootScope.currentEvent.eventName);
 
   $scope.backClicked = function(){
@@ -285,18 +285,24 @@ angular.module('starter', ['ionic','firebase'])
   };
 
     $scope.submitClicked = function(vote){
-    console.log("submit clicked");
-    $state.go("voter_submission")
+      console.log("submit clicked");
+      //$state.go("voter_submission")
 
-    if(vote == 1){
-      $rootScope.currentEvent.option1_votes++;
-    }else if (vote == 2){
-      $rootScope.currentEvent.option2_votes++;
-    }else if (vote == 3){
-      $rootScope.currentEvent.option3_votes++;
-    }else if (vote == 4){
-      $rootScope.currentEvent.option4_votes++;
-    }
+      if(vote == 1){
+        $rootScope.currentEvent.option1_votes++;
+      }else if (vote == 2){
+        $rootScope.currentEvent.option2_votes++;
+      }else if (vote == 3){
+        $rootScope.currentEvent.option3_votes++;
+      }else if (vote == 4){
+        $rootScope.currentEvent.option4_votes++;
+      }
+
+      $scope.msg = "Vote Submitted";
+
+      $timeout(function(){
+        $state.go('voter_search');
+      }, 2000);
   };
 })
 
@@ -313,7 +319,7 @@ angular.module('starter', ['ionic','firebase'])
   }
 ])
 
-  
+
 .factory("Events", ["$firebaseArray",
   function($firebaseArray) {
     // create a reference to the database where we will store our data
