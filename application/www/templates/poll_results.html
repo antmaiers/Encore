@@ -12,26 +12,26 @@
 
         <div class="list list-inset">
           <div style="font-size:20px" class="item">
-            {{ currentEvent.option1 }}: <b>34%</b>
+            {{ currentEvent.option1 }}: <b>{{ currentEvent.option1_votes }} votes</b>
           </div>
 
           <div style="font-size:20px" class="item">
-            {{ currentEvent.option1 }}: <b>22%</b>
+            {{ currentEvent.option1 }}: <b>{{ currentEvent.option2_votes }} votes</b>
           </div>
 
           <div style="font-size:20px" class="item">
-            {{ currentEvent.option1 }}: <b>18%</b>
+            {{ currentEvent.option1 }}: <b>{{ currentEvent.option3_votes }} votes</b>
           </div>
 
           <div style="font-size:20px" class="item">
-            {{ currentEvent.option1 }}: <b>26%</b>
+            {{ currentEvent.option1 }}: <b>{{ currentEvent.option4_votes }} votes</b>
           </div>
         </div>
 
 
         <center>
           <button class="button button-large button-royal" ng-click="homeClicked()">
-            Back to Event Management
+            Back to Events
           </button>
         </center>
 

@@ -65,10 +65,10 @@ angular.module('starter', ['ionic','firebase'])
     controller: 'host_poll_in_progress_Ctrl'
   })
 
-  .state('host_poll_results', {
-    url: '/host_poll_results',
-    templateUrl: 'templates/host_poll_results.html',
-    controller: 'host_poll_results_Ctrl'
+  .state('poll_results', {
+    url: '/poll_results',
+    templateUrl: 'templates/poll_results.html',
+    controller: 'poll_results_Ctrl'
   })
 
   .state('voter_search', {
@@ -94,7 +94,7 @@ angular.module('starter', ['ionic','firebase'])
 
 })
 
-.controller('loginCtrl', function($scope, $firebaseAuth, $timeout, $state) {
+.controller('loginCtrl', function($scope,$rootScope, $firebaseAuth, $timeout, $state) {
   $scope.createAccount = function(){
     console.log("clicked create account");
     $state.go("create_account")
@@ -115,6 +115,7 @@ angular.module('starter', ['ionic','firebase'])
 
     $scope.firebaseUser = null;
     $scope.error = null;
+    $rootScope.user_type = item.name;
 
     var auth = $firebaseAuth();
 
@@ -246,19 +247,25 @@ angular.module('starter', ['ionic','firebase'])
 .controller('host_poll_in_progress_Ctrl', function($scope, $state){
   $scope.stopClicked = function(){
     console.log("stop clicked");
-    $state.go("host_poll_results")
+    $state.go("poll_results")
   };
 })
 
 
 
-.controller('host_poll_results_Ctrl', function($scope, $rootScope, $state){
+.controller('poll_results_Ctrl', function($scope, $rootScope, $state){
 
   console.log("Currentevent: "+$rootScope.currentEvent.eventName);
 
   $scope.homeClicked = function(){
+    console.log("$rootScope.user_type= "+$rootScope.user_type);
     console.log("home clicked");
-    $state.go("host_events_management")
+    if ($rootScope.user_type == "Voter"){
+      $state.go("voter_search")
+    }else if($rootScope.user_type == "Host"){
+      $state.go("host_events_management")
+    }
+
   };
 })
 
@@ -271,12 +278,18 @@ angular.module('starter', ['ionic','firebase'])
   $scope.events = Events;
 
   $scope.voteClicked = function(x){
-      console.log("select clicked for event: " + x.eventName);
-      console.log("votes: " + x.votes);
+      console.log("vote clicked for event: " + x.eventName);
 
       $rootScope.currentEvent = x;
 
       $state.go("voter_vote")
+  };
+  $scope.resultsClicked = function(x){
+    console.log("results clicked for event: " + x.eventName);
+
+    $rootScope.currentEvent = x;
+
+    $state.go("poll_results")
   };
 })
 
