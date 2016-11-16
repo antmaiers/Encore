@@ -94,10 +94,21 @@ angular.module('starter', ['ionic','firebase'])
 
 })
 
-.controller('loginCtrl', function($scope,$rootScope, $firebaseAuth, $timeout, $state) {
+.controller('loginCtrl', function($scope,$rootScope, $firebaseAuth, Auth, $timeout, $state) {
   $scope.createAccount = function(){
     console.log("clicked create account");
     $state.go("create_account")
+  };
+
+  $scope.login_check = function(){
+      return !($rootScope.loggedIn);
+  };
+
+  $scope.logout = function(){
+    Auth.$signOut();
+    console.log("Signing out");
+    $rootScope.loggedIn = false;
+    $state.go('login');
   };
 
   console.log($scope.selectedUser);
@@ -136,6 +147,8 @@ angular.module('starter', ['ionic','firebase'])
           }else{
             console.log("user not selected properly")
           }
+
+          $rootScope.loggedIn = true;
 
       }).catch(function(error) {
         $scope.error = error;
