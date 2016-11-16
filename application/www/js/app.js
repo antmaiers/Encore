@@ -306,7 +306,7 @@ angular.module('starter', ['ionic','firebase'])
   };
 })
 
-.controller('voter_vote_Ctrl', function($scope, $rootScope, $state, $timeout){
+.controller('voter_vote_Ctrl', function($scope, $rootScope, $state, $timeout, Events){
 
   console.log("Currentevent: "+$rootScope.currentEvent.eventName);
 
@@ -328,6 +328,8 @@ angular.module('starter', ['ionic','firebase'])
       }else if (vote == 4){
         $rootScope.currentEvent.option4_votes++;
       }
+
+      Events.$save($rootScope.currentEvent);
 
       $scope.msg = "Vote Submitted";
 
