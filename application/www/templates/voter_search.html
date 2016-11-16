@@ -15,12 +15,13 @@
 
    <ul class="list">
      <li ng-repeat="x in events" class="item item-button-right">
-       <div style="font-size:20px"><b>{{ x.eventName }}</b></div>
-       <div>{{ x.eventLocation }}, {{ x.eventTime }}</div>
-       <div>{{ x.option1 }} ({{ x.option1_votes }}),
-            {{ x.option2 }} ({{ x.option2_votes }}),
-            {{ x.option3 }} ({{ x.option3_votes }}),
-            {{ x.option4 }} ({{ x.option4_votes }})</div>
+       <div>
+         <b style="font-size:20px">{{ x.eventName }}</b>, {{ x.eventLocation }}, {{ x.eventTime }}
+       </div>
+       <div>{{ x.option1 }}</div>
+       <div>{{ x.option2 }}</div>
+       <div>{{ x.option3 }}</div>
+       <div>{{ x.option4 }}</div>
 
         <div>
           <button class="button button-small button-royal" ng-click="voteClicked(x)">

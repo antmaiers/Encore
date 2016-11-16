@@ -12,7 +12,7 @@
      <li ng-repeat="x in events" class="item item-button-right">
        <div style="font-size:20px"><b>{{ x.eventName }}</b></div>
        <div>{{ x.eventLocation }}, {{ x.eventTime }}</div>
-       <div>{{ x.option1 }}({{ x.option1_votes }}), {{ x.option2 }}, {{ x.option3 }} , {{ x.option4 }}</div>
+       <div>{{ x.option1 }}, {{ x.option2 }}, {{ x.option3 }} , {{ x.option4 }}</div>
 
 
        <div>
@@ -27,9 +27,7 @@
      </li>
    </ul>
 
-
-
-    <center><a class="button button-royal icon icon-right ion-plus-circled" ng-click="newEventClicked()">Create New Event</a></center>
+   <center><a class="button button-royal icon icon-right ion-plus-circled" ng-click="newEventClicked()">Create New Event</a></center>
 
   </ion-content>
 </ion-view>
