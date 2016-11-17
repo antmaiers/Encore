@@ -1,7 +1,10 @@
 
 <ion-view view-title="Encore">
 
+
  <ion-content>
+
+
 
  	<!--<h1 style="color:blueviolet; padding:5px" class="title">
         Current Events:
@@ -17,6 +20,11 @@
      </button>
    </form>
 
+   <p></p>
+
+   <left><a class="button button-royal icon icon-right ion-plus-circled" ng-click="newEventClicked()">Create New Event</a></left>
+
+   <p></p>
 
    <ul class="list">
      <li ng-repeat="x in events" class="item item-button-right">
@@ -46,7 +54,7 @@
      </li>
    </ul>
 
-   <center><a class="button button-royal icon icon-right ion-plus-circled" ng-click="newEventClicked()">Create New Event</a></center>
+   <!--<center><a class="button button-royal icon icon-right ion-plus-circled" ng-click="newEventClicked()">Create New Event</a></center>-->
 
   </ion-content>
 </ion-view>

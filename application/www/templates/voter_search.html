@@ -22,12 +22,13 @@
        <div>"{{ x.option4 }}"</div>
 
 
-       <button style="padding:40px; font-size:30px" class="button button-small button-royal" ng-hide="open_check(x)" ng-click="voteClicked(x)">
+       <div> <button style="padding:5px; font-size:20px" class="button button-small button-royal icon ion-person-stalker" ng-hide="open_check(x)" ng-click="voteClicked(x)">
          Vote
        </button>
-       <button style="padding:40px; font-size:30px" class="button button-small button-royal" ng-hide="closed_check(x)" ng-click="resultsClicked(x)">
+       <button style="padding:5px; font-size:20px" class="button button-small button-royal icon ion-pie-graph" ng-hide="closed_check(x)" ng-click="resultsClicked(x)">
          Results
        </button>
+       </div>
      </li>
    </ul>
 
