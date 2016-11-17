@@ -372,8 +372,6 @@ angular.module('starter', ['ionic','firebase'])
   $scope.closed_check = function(x){
     $scope.isClosed = false;
 
-    console.log("state= "+x.state);
-
     if(x.state == "closed"){
       $scope.isClosed = true;
     }
@@ -402,7 +400,7 @@ angular.module('starter', ['ionic','firebase'])
     $state.go("voter_search")
   };
 
-  scope.submitClicked = function(vote){
+  $scope.submitClicked = function(vote){
     console.log("submit clicked");
     //$state.go("voter_submission")
 
