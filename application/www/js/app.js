@@ -138,12 +138,12 @@ angular.module('starter', ['ionic','firebase'])
             $timeout(function(){
 
             $state.go('voter_search');
-            }, 2000);
+            }, 1000);
           }else if(item.name == $scope.users[2].name){
             $timeout(function(){
 
             $state.go('host_events_management');
-            }, 2000);
+            }, 1000);
           }else{
             console.log("user not selected properly")
           }
@@ -189,7 +189,7 @@ angular.module('starter', ['ionic','firebase'])
 
           $timeout(function(){
             $state.go('login');
-          }, 2000);
+          }, 1000);
 
       }).catch(function(error) {
         console.log("Error:", error);
@@ -220,6 +220,7 @@ angular.module('starter', ['ionic','firebase'])
     {eventName: item.eventName,
       eventLocation: item.eventLocation,
       eventTime: item.eventTime,
+      open: false,
       option1: item.option1,
       option2: item.option2,
       option3: item.option3,
@@ -243,10 +244,25 @@ angular.module('starter', ['ionic','firebase'])
   $scope.events = Events;
 
   $scope.startClicked = function(x){
-    console.log("select clicked for event: " + x.eventName);
-    //console.log("submit clicked");
+    console.log("start clicked for event: " + x.eventName);
     $rootScope.currentEvent = x;
-    $state.go("host_poll_in_progress")
+    $rootScope.currentEvent.open = true;
+    Events.$save($rootScope.currentEvent);
+    //$state.go("host_poll_in_progress")
+  };
+
+  $scope.stopClicked = function(x){
+    console.log("stop clicked for event: " + x.eventName);
+    $rootScope.currentEvent = x;
+    $rootScope.currentEvent.open = false;
+    Events.$save($rootScope.currentEvent);
+    //$state.go("host_poll_in_progress")
+  };
+
+  $scope.viewVotesClicked = function(x){
+    console.log("view votes clicked");
+    $rootScope.currentEvent = x;
+    $state.go("poll_results");
   };
 
   $scope.deleteItem = function(x){
@@ -289,6 +305,19 @@ angular.module('starter', ['ionic','firebase'])
   };
 
   $scope.events = Events;
+
+  $scope.open_check = function(x){
+      $scope.isOpen = false;
+
+      console.log("open= "+x.open);
+
+      if(x.open == true){
+        $scope.isOpen = true;
+      }
+
+      return !($scope.isOpen);
+
+  };
 
   $scope.voteClicked = function(x){
       console.log("vote clicked for event: " + x.eventName);
@@ -335,7 +364,7 @@ angular.module('starter', ['ionic','firebase'])
 
       $timeout(function(){
         $state.go('voter_search');
-      }, 2000);
+      }, 1000);
   };
 })
 
