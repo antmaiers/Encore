@@ -179,6 +179,7 @@ angular.module('starter', ['ionic','firebase'])
     Auth.$signOut();
     console.log("Signing out");
     $state.go('login');
+    $rootScope.loggedIn = false;
   };
 
   $scope.users = [
@@ -300,7 +301,7 @@ angular.module('starter', ['ionic','firebase'])
   };
 })
 
-.controller('host_events_management_Ctrl', function($scope, $rootScope,$firebaseArray, $state, Events){
+.controller('host_events_management_Ctrl', function($scope, $rootScope, $state, Events){
   $scope.events = Events;
 
   $scope.query = {
