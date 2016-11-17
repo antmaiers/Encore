@@ -50,43 +50,106 @@ angular.module('starter', ['ionic','firebase'])
   .state('host_events_management', {
     url: '/host_events_management',
     templateUrl: 'templates/events_management.html',
-    controller: 'host_events_management_Ctrl'
+    controller: 'host_events_management_Ctrl',
+    resolve: {
+      // controller will not be loaded until $requireSignIn resolves
+      // Auth refers to our $firebaseAuth wrapper in the factory below
+      "currentAuth": ["Auth", function(Auth) {
+        // $requireSignIn returns a promise so the resolve waits for it to complete
+        // If the promise is rejected, it will throw a $stateChangeError (see above)
+        return Auth.$requireSignIn();
+      }]
+    }
   })
 
   .state('host_create_event', {
     cache: false,
     url: '/host_create_event',
     templateUrl: 'templates/host_create_event.html',
-    controller: 'host_create_event_Ctrl'
+    controller: 'host_create_event_Ctrl',
+    resolve: {
+      // controller will not be loaded until $requireSignIn resolves
+      // Auth refers to our $firebaseAuth wrapper in the factory below
+      "currentAuth": ["Auth", function(Auth) {
+        // $requireSignIn returns a promise so the resolve waits for it to complete
+        // If the promise is rejected, it will throw a $stateChangeError (see above)
+        return Auth.$requireSignIn();
+      }]
+    }
   })
   .state('host_poll_in_progress', {
     url: '/host_poll_in_progress',
     templateUrl: 'templates/host_poll_in_progress.html',
-    controller: 'host_poll_in_progress_Ctrl'
+    controller: 'host_poll_in_progress_Ctrl',
+    resolve: {
+      // controller will not be loaded until $requireSignIn resolves
+      // Auth refers to our $firebaseAuth wrapper in the factory below
+      "currentAuth": ["Auth", function(Auth) {
+        // $requireSignIn returns a promise so the resolve waits for it to complete
+        // If the promise is rejected, it will throw a $stateChangeError (see above)
+        return Auth.$requireSignIn();
+      }]
+    }
   })
 
   .state('poll_results', {
     url: '/poll_results',
     templateUrl: 'templates/poll_results.html',
-    controller: 'poll_results_Ctrl'
+    controller: 'poll_results_Ctrl',
+    resolve: {
+      // controller will not be loaded until $requireSignIn resolves
+      // Auth refers to our $firebaseAuth wrapper in the factory below
+      "currentAuth": ["Auth", function(Auth) {
+        // $requireSignIn returns a promise so the resolve waits for it to complete
+        // If the promise is rejected, it will throw a $stateChangeError (see above)
+        return Auth.$requireSignIn();
+      }]
+    }
   })
 
   .state('voter_search', {
     url: '/voter_search',
     templateUrl: 'templates/voter_search.html',
-    controller: 'voter_search_Ctrl'
+    controller: 'voter_search_Ctrl',
+    resolve: {
+      // controller will not be loaded until $requireSignIn resolves
+      // Auth refers to our $firebaseAuth wrapper in the factory below
+      "currentAuth": ["Auth", function(Auth) {
+        // $requireSignIn returns a promise so the resolve waits for it to complete
+        // If the promise is rejected, it will throw a $stateChangeError (see above)
+        return Auth.$requireSignIn();
+      }]
+    }
   })
 
   .state('voter_vote', {
     url: '/voter_vote',
     templateUrl: 'templates/voter_vote.html',
-    controller: 'voter_vote_Ctrl'
+    controller: 'voter_vote_Ctrl',
+    resolve: {
+      // controller will not be loaded until $requireSignIn resolves
+      // Auth refers to our $firebaseAuth wrapper in the factory below
+      "currentAuth": ["Auth", function(Auth) {
+        // $requireSignIn returns a promise so the resolve waits for it to complete
+        // If the promise is rejected, it will throw a $stateChangeError (see above)
+        return Auth.$requireSignIn();
+      }]
+    }
   })
 
   .state('voter_submission', {
     url: '/voter_submission',
     templateUrl: 'templates/voter_submission.html',
-    controller: 'voter_submission_Ctrl'
+    controller: 'voter_submission_Ctrl',
+    resolve: {
+      // controller will not be loaded until $requireSignIn resolves
+      // Auth refers to our $firebaseAuth wrapper in the factory below
+      "currentAuth": ["Auth", function(Auth) {
+        // $requireSignIn returns a promise so the resolve waits for it to complete
+        // If the promise is rejected, it will throw a $stateChangeError (see above)
+        return Auth.$requireSignIn();
+      }]
+    }
   })
 
   // if none of the above states are matched, use this as the fallback
@@ -107,11 +170,9 @@ angular.module('starter', ['ionic','firebase'])
   $scope.logout = function(){
     Auth.$signOut();
     console.log("Signing out");
-    $rootScope.loggedIn = false;
     $state.go('login');
   };
 
-  console.log($scope.selectedUser);
   $scope.users = [
     {name: '<---Select--->'},
     {name:'Voter'},
@@ -128,10 +189,8 @@ angular.module('starter', ['ionic','firebase'])
     $scope.error = null;
     $rootScope.user_type = item.name;
 
-    var auth = $firebaseAuth();
-
     if ($scope.selected == true){
-      auth.$signInWithEmailAndPassword($scope.user.email, $scope.user.password).then(function(firebaseUser) {
+      Auth.$signInWithEmailAndPassword($scope.user.email, $scope.user.password).then(function(firebaseUser) {
         $scope.firebaseUser = firebaseUser;
 
           if(item.name == $scope.users[1].name){
@@ -144,8 +203,6 @@ angular.module('starter', ['ionic','firebase'])
 
             $state.go('host_events_management');
             }, 1000);
-          }else{
-            console.log("user not selected properly")
           }
 
           $rootScope.loggedIn = true;
@@ -167,7 +224,7 @@ angular.module('starter', ['ionic','firebase'])
   }
 })
 
-.controller('create_account_Ctrl', function($scope, $firebaseAuth, $timeout, $state) {
+.controller('create_account_Ctrl', function($scope, $firebaseAuth,Auth, $timeout, $state) {
   $scope.user = {};
 
   $scope.backClicked = function(){
@@ -180,10 +237,8 @@ angular.module('starter', ['ionic','firebase'])
     $scope.firebaseUser = null;
     $scope.error = null;
 
-    var auth = $firebaseAuth();
-
     if ($scope.match == true){
-      auth.$createUserWithEmailAndPassword($scope.user.email, $scope.user.password).then(function(firebaseUser) {
+      Auth.$createUserWithEmailAndPassword($scope.user.email, $scope.user.password).then(function(firebaseUser) {
         $scope.firebaseUser = firebaseUser;
         console.log("User created successfully!");
 
@@ -215,20 +270,19 @@ angular.module('starter', ['ionic','firebase'])
     console.log("submit clicked");
     $state.go("host_events_management")
 
-
     $scope.event =
-    {eventName: item.eventName,
-      eventLocation: item.eventLocation,
-      eventTime: item.eventTime,
-      state: "new",
-      option1: item.option1,
-      option2: item.option2,
-      option3: item.option3,
-      option4: item.option4,
-      option1_votes: 0,
-      option2_votes: 0,
-      option3_votes: 0,
-      option4_votes: 0        };
+      { eventName: item.eventName,
+        eventLocation: item.eventLocation,
+        eventTime: item.eventTime,
+        state: "new",
+        option1: item.option1,
+        option2: item.option2,
+        option3: item.option3,
+        option4: item.option4,
+        option1_votes: 0,
+        option2_votes: 0,
+        option3_votes: 0,
+        option4_votes: 0 };
 
     Events.$add($scope.event);
 
@@ -237,7 +291,7 @@ angular.module('starter', ['ionic','firebase'])
 
 .controller('host_events_management_Ctrl', function($scope, $rootScope, $state, Events){
   $scope.newEventClicked = function(){
-    console.log("next clicked");
+    console.log("new event clicked");
     $state.go("host_create_event")
   };
 
@@ -309,8 +363,6 @@ angular.module('starter', ['ionic','firebase'])
   $scope.open_check = function(x){
       $scope.isOpen = false;
 
-      console.log("state= "+x.state);
-
       if(x.state == "open"){
         $scope.isOpen = true;
       }
@@ -330,16 +382,13 @@ angular.module('starter', ['ionic','firebase'])
 
   $scope.voteClicked = function(x){
       console.log("vote clicked for event: " + x.eventName);
-
       $rootScope.currentEvent = x;
-
       $state.go("voter_vote")
   };
+
   $scope.resultsClicked = function(x){
     console.log("results clicked for event: " + x.eventName);
-
     $rootScope.currentEvent = x;
-
     $state.go("poll_results")
   };
 })
@@ -353,27 +402,27 @@ angular.module('starter', ['ionic','firebase'])
     $state.go("voter_search")
   };
 
-    $scope.submitClicked = function(vote){
-      console.log("submit clicked");
-      //$state.go("voter_submission")
+  scope.submitClicked = function(vote){
+    console.log("submit clicked");
+    //$state.go("voter_submission")
 
-      if(vote == 1){
-        $rootScope.currentEvent.option1_votes++;
-      }else if (vote == 2){
-        $rootScope.currentEvent.option2_votes++;
-      }else if (vote == 3){
-        $rootScope.currentEvent.option3_votes++;
-      }else if (vote == 4){
-        $rootScope.currentEvent.option4_votes++;
-      }
+    if(vote == 1){
+      $rootScope.currentEvent.option1_votes++;
+    }else if (vote == 2){
+      $rootScope.currentEvent.option2_votes++;
+    }else if (vote == 3){
+      $rootScope.currentEvent.option3_votes++;
+    }else if (vote == 4){
+      $rootScope.currentEvent.option4_votes++;
+    }
 
-      Events.$save($rootScope.currentEvent);
+    Events.$save($rootScope.currentEvent);
 
-      $scope.msg = "Vote Submitted";
+    $scope.msg = "Vote Submitted";
 
-      $timeout(function(){
-        $state.go('voter_search');
-      }, 1000);
+    $timeout(function(){
+      $state.go('voter_search');
+    }, 1000);
   };
 })
 
