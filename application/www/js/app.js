@@ -274,8 +274,11 @@ angular.module('starter', ['ionic','firebase'])
 })
 
 .controller('host_create_event_Ctrl', function($scope, $state, Events) {
+  $scope.backClicked = function(){
+    $state.go("host_events_management");
+  };
+
   $scope.submitClicked = function(item){
-    console.log("submit clicked");
     $state.go("host_events_management")
 
     $scope.event =
