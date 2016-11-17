@@ -220,7 +220,7 @@ angular.module('starter', ['ionic','firebase'])
     {eventName: item.eventName,
       eventLocation: item.eventLocation,
       eventTime: item.eventTime,
-      open: false,
+      state: "new",
       option1: item.option1,
       option2: item.option2,
       option3: item.option3,
@@ -246,7 +246,7 @@ angular.module('starter', ['ionic','firebase'])
   $scope.startClicked = function(x){
     console.log("start clicked for event: " + x.eventName);
     $rootScope.currentEvent = x;
-    $rootScope.currentEvent.open = true;
+    $rootScope.currentEvent.state = "open";
     Events.$save($rootScope.currentEvent);
     //$state.go("host_poll_in_progress")
   };
@@ -254,7 +254,7 @@ angular.module('starter', ['ionic','firebase'])
   $scope.stopClicked = function(x){
     console.log("stop clicked for event: " + x.eventName);
     $rootScope.currentEvent = x;
-    $rootScope.currentEvent.open = false;
+    $rootScope.currentEvent.state = "closed"
     Events.$save($rootScope.currentEvent);
     //$state.go("host_poll_in_progress")
   };
@@ -309,14 +309,23 @@ angular.module('starter', ['ionic','firebase'])
   $scope.open_check = function(x){
       $scope.isOpen = false;
 
-      console.log("open= "+x.open);
+      console.log("state= "+x.state);
 
-      if(x.open == true){
+      if(x.state == "open"){
         $scope.isOpen = true;
       }
-
       return !($scope.isOpen);
+  };
 
+  $scope.closed_check = function(x){
+    $scope.isClosed = false;
+
+    console.log("state= "+x.state);
+
+    if(x.state == "closed"){
+      $scope.isClosed = true;
+    }
+    return !($scope.isClosed);
   };
 
   $scope.voteClicked = function(x){

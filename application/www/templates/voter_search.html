@@ -27,13 +27,9 @@
           <button style="padding:40px; font-size:30px" class="button button-small button-royal" ng-hide="open_check(x)" ng-click="voteClicked(x)">
             Vote
           </button>
-          <button style="padding:40px; font-size:30px" class="button button-small button-royal" ng-hide="!(open_check(x))" ng-click="resultsClicked(x)">
+          <button style="padding:40px; font-size:30px" class="button button-small button-royal" ng-hide="closed_check(x)" ng-click="resultsClicked(x)">
             Results
           </button>
-
-
-
-
      </li>
    </ul>
 
