@@ -115,6 +115,7 @@ angular.module('starter', ['ionic','firebase'])
   })
 
   .state('voter_search', {
+    cache: false,
     url: '/voter_search',
     templateUrl: 'templates/voter_search.html',
     controller: 'voter_search_Ctrl',
@@ -360,10 +361,6 @@ angular.module('starter', ['ionic','firebase'])
 })
 
 .controller('voter_search_Ctrl', function($scope, $rootScope, $firebaseObject, $firebaseArray, $state, Events, EventsQuery){
-  $scope.searchClicked = function(){
-    console.log("search clicked");
-    //$state.go("voter_vote")
-  };
 
   $scope.events = Events;
 
@@ -392,10 +389,9 @@ angular.module('starter', ['ionic','firebase'])
 
   $scope.searchClicked = function(){
     if($scope.query.search != "") {
-      console.log("search clicked");
-      console.log("$scope.query = " + $scope.query.search);
       var ref = firebase.database().ref();
       $scope.events = $firebaseArray(ref.child("Events").orderByChild('eventName').equalTo($scope.query.search));
+      //$scope.events = EventsQuery;
     }else{
       $scope.events = Events;
     }
@@ -424,14 +420,13 @@ angular.module('starter', ['ionic','firebase'])
 
   console.log("Currentevent: "+$rootScope.currentEvent.eventName);
 
-  $scope.backClicked = function(){
-    console.log("back clicked");
+  $scope.backClicked = function(){;
     $state.go("voter_search")
   };
 
   $scope.submitClicked = function(vote){
-    console.log("submit clicked");
-    //$state.go("voter_submission")
+
+    console.log("vote = "+vote);
 
     if(vote == 1){
       $rootScope.currentEvent.option1_votes++;
