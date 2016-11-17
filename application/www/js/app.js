@@ -22,6 +22,13 @@ angular.module('starter', ['ionic','firebase'])
     }
   });
 
+  $rootScope.$on("$routeChangeError", function(event, next, previous, error) {
+    // We can catch the error thrown when the $requireSignIn promise is rejected
+    // and redirect the user back to the home page
+    if (error === "AUTH_REQUIRED") {
+      $location.path("/login");
+    }
+  });
 
 })
 
@@ -352,13 +359,17 @@ angular.module('starter', ['ionic','firebase'])
   };
 })
 
-.controller('voter_search_Ctrl', function($scope, $rootScope, $firebaseObject, $state, Events){
+.controller('voter_search_Ctrl', function($scope, $rootScope, $firebaseObject, $firebaseArray, $state, Events, EventsQuery){
   $scope.searchClicked = function(){
     console.log("search clicked");
     //$state.go("voter_vote")
   };
 
   $scope.events = Events;
+
+  $scope.query = {
+    search:""
+  }
 
   $scope.open_check = function(x){
       $scope.isOpen = false;
@@ -377,6 +388,24 @@ angular.module('starter', ['ionic','firebase'])
     }
     return !($scope.isClosed);
   };
+
+
+  $scope.searchClicked = function(){
+    if($scope.query.search != "") {
+      console.log("search clicked");
+      console.log("$scope.query = " + $scope.query.search);
+      var ref = firebase.database().ref();
+      $scope.events = $firebaseArray(ref.child("Events").orderByChild('eventName').equalTo($scope.query.search));
+    }else{
+      $scope.events = Events;
+    }
+  };
+
+  $scope.cancelClicked = function(){
+    $scope.query.search = "";
+    $scope.events = Events;
+  };
+
 
   $scope.voteClicked = function(x){
       console.log("vote clicked for event: " + x.eventName);
@@ -437,15 +466,21 @@ angular.module('starter', ['ionic','firebase'])
   }
 ])
 
-
 .factory("Events", ["$firebaseArray",
   function($firebaseArray) {
     // create a reference to the database where we will store our data
     var ref = firebase.database().ref();
 
-    return $firebaseArray(ref.child("Events"));
+    return $firebaseArray(ref.child("Events"));//.orderByChild('eventName').equalTo("test"));
+  }
+])
+
+.factory("EventsQuery", ["$firebaseArray",
+  function($firebaseArray, $rootScope) {
+    // create a reference to the database where we will store our data
+    var ref = firebase.database().ref();
+
+    return $firebaseArray(ref.child("EventsQuery").orderByChild('eventName').equalTo("test"));
   }
 ]);
-
-
 
