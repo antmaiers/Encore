@@ -300,13 +300,29 @@ angular.module('starter', ['ionic','firebase'])
   };
 })
 
-.controller('host_events_management_Ctrl', function($scope, $rootScope, $state, Events){
+.controller('host_events_management_Ctrl', function($scope, $rootScope,$firebaseArray, $state, Events){
+  $scope.events = Events;
+
+  $scope.query = {
+    search:""
+  }
+
   $scope.newEventClicked = function(){
     console.log("new event clicked");
     $state.go("host_create_event")
   };
 
-  $scope.events = Events;
+  $scope.searchClicked = function(){
+    if($scope.query.search != "") {
+      var ref = firebase.database().ref();
+      $scope.events = $firebaseArray(ref.child("Events").orderByChild('eventName').equalTo($scope.query.search));
+      //$scope.events = EventsQuery;
+    }else{
+      $scope.events = Events;
+    }
+  };
+
+  //$scope.events = Events;
 
   $scope.startClicked = function(x){
     console.log("start clicked for event: " + x.eventName);
