@@ -1,15 +1,20 @@
 <ion-view view-title="Encore">
 
-        <ion-content padding="true" class="has-header">
-            <h1 style="padding:10px; color:blueviolet">
+        <ion-content> <!--padding="true" class="has-header">-->
+            <!--<h1 style="padding:10px; color:blueviolet">
                 <center>
                   Make Your Vote
                 </center>
-            </h1>
-            <center><h3 style="color:blueviolet;">{{ currentEvent.eventName }}</h3></center>
+            </h1>-->
+            <p></p>
+            <p></p>
+            <center><h2 style="color:blueviolet;">{{ currentEvent.eventName }}</h2></center>
 
-
-            <ion-list style="padding:0px 10px 0px">
+           
+            <ion-list style="padding:5px">
+                <div class="item item-divider">
+                Vote For: 
+                </div>
                 <ion-radio ng-model="choice" ng-value="1">
                     <i class="icon ion-music-note"></i>
                     <span class="item-note">Select</span>
