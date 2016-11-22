@@ -412,6 +412,9 @@ angular.module('starter', ['ionic','firebase'])
       var ref = firebase.database().ref();
       $scope.events = $firebaseArray(ref.child("Events").orderByChild('eventName').equalTo($scope.query.search));
       //$scope.events = EventsQuery;
+      //$rootScope.query = $scope.query.search;
+      //console.log("rootScope.query= "+$rootScope.query);
+      //$scope.events = Events;
     }else{
       $scope.events = Events;
     }
@@ -458,9 +461,14 @@ angular.module('starter', ['ionic','firebase'])
       $rootScope.currentEvent.option4_votes++;
     }
 
-    Events.$save($rootScope.currentEvent);
+    Events.$save($rootScope.currentEvent).then(function(x) {
+        console.log("success: " + JSON.stringify(x));
+      }, function(error) {
+        console.log("error: " + JSON.stringify(error));
+      }
+    )
 
-    $scope.msg = "Vote Submitted";
+      $scope.msg = "Vote Submitted";
 
     $timeout(function(){
       $state.go('voter_search');
@@ -481,14 +489,15 @@ angular.module('starter', ['ionic','firebase'])
   }
 ])
 
-.factory("Events", ["$firebaseArray",
-  function($firebaseArray) {
-    // create a reference to the database where we will store our data
-    var ref = firebase.database().ref();
+  .factory("Events", ["$firebaseArray",
+    function($firebaseArray) {
+      // create a reference to the database where we will store our data
+      var ref = firebase.database().ref();
 
-    return $firebaseArray(ref.child("Events"));//.orderByChild('eventName').equalTo("test"));
-  }
-])
+      return $firebaseArray(ref.child("Events"));//.orderByChild('eventName').equalTo("test"));
+
+    }
+  ])
 
 .factory("EventsQuery", ["$firebaseArray",
   function($firebaseArray, $rootScope) {
