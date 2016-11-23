@@ -301,7 +301,7 @@ angular.module('starter', ['ionic','firebase'])
   };
 })
 
-.controller('host_events_management_Ctrl', function($scope, $rootScope, $state, Events){
+.controller('host_events_management_Ctrl', function($scope, $rootScope,$firebaseArray, $state, Events){
   $scope.events = Events;
 
   $scope.query = {
@@ -318,6 +318,9 @@ angular.module('starter', ['ionic','firebase'])
       var ref = firebase.database().ref();
       $scope.events = $firebaseArray(ref.child("Events").orderByChild('eventName').equalTo($scope.query.search));
       //$scope.events = EventsQuery;
+      //$rootScope.query = $scope.query.search;
+      //console.log("rootScope.query= "+$rootScope.query);
+      //$scope.events = Events;
     }else{
       $scope.events = Events;
     }
