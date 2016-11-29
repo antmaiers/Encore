@@ -215,6 +215,8 @@ angular.module('starter', ['ionic','firebase'])
           }
 
           $rootScope.loggedIn = true;
+          $rootScope.email = $scope.user.email;
+          console.log("$rootScope.email= "+$rootScope.email);
 
       }).catch(function(error) {
         $scope.error = error;
@@ -274,7 +276,7 @@ angular.module('starter', ['ionic','firebase'])
   }
 })
 
-.controller('host_create_event_Ctrl', function($scope, $state, Events) {
+.controller('host_create_event_Ctrl', function($scope, $rootScope, $state, Events) {
   $scope.backClicked = function(){
     $state.go("host_events_management");
   };
@@ -287,6 +289,7 @@ angular.module('starter', ['ionic','firebase'])
         eventLocation: item.eventLocation,
         eventTime: item.eventTime,
         state: "new",
+        email: $rootScope.email,
         option1: item.option1,
         option2: item.option2,
         option3: item.option3,
@@ -304,6 +307,12 @@ angular.module('starter', ['ionic','firebase'])
 .controller('host_events_management_Ctrl', function($scope, $rootScope,$firebaseArray, $state, Events){
   $scope.events = Events;
 
+  $scope.currentEvent = {
+    email:""
+  }
+
+  $scope.message = "";
+
   $scope.query = {
     search:""
   }
@@ -311,6 +320,28 @@ angular.module('starter', ['ionic','firebase'])
   $scope.newEventClicked = function(){
     console.log("new event clicked");
     $state.go("host_create_event")
+  };
+
+  $scope.emailClicked = function(x){
+    $rootScope.validEmail = false;
+    //console.log("emailClicked()");
+    //console.log("$scope.currentEvent.email = "+$scope.currentEvent.email);
+   // console.log("x.email="+x.email);
+    if($scope.currentEvent.email == x.email){
+      $rootScope.validEmail = true;
+    }else{
+      $scope.message = "Email is incorrect";
+    }
+  };
+
+  $scope.emailCheck = function(x){
+    $rootScope.validEmail = false;
+
+    if($rootScope.email == x.email){
+      $rootScope.validEmail = true;
+    }
+
+    return $rootScope.validEmail;
   };
 
   $scope.searchClicked = function(){

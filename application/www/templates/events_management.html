@@ -39,20 +39,31 @@
        <p></p>
 
        <div>
-         <button class="button button-small button-royal icon icon-left ion-clock" ng-click="startClicked(x)">
+        <!-- <form ng-submit="emailClicked(x)" ng-hide="emailCheck(x)" class="bar bar-header item-input-inset">
+           <label class="item-input-wrapper">
+             <input type="text" placeholder="Enter email to edit..." ng-model="currentEvent.email">
+           </label>
+           <button class="button button-royal">
+             Edit
+           </button>
+         </form>
+
+         <h2 class="text-center assertive">{{ message }}</h2> -->
+
+         <button class="button button-small button-royal icon icon-left ion-clock" ng-hide="!emailCheck(x)" ng-click="startClicked(x)">
            <b>Start Event</b>
          </button>
-         <button class="button button-small button-royal icon icon-left ion-stop" ng-click="stopClicked(x)">
+         <button class="button button-small button-royal icon icon-left ion-stop" ng-hide="!emailCheck(x)" ng-click="stopClicked(x)">
            <b>Stop Event</b>
          </button>
        </div>
        <p></p>
        <p></p>
        <div>
-         <button class="button button-small button-royal icon icon-left ion-person-stalker" ng-click="viewVotesClicked(x)">
+         <button class="button button-small button-royal icon icon-left ion-person-stalker" ng-hide="!emailCheck(x)"  ng-click="viewVotesClicked(x)">
            <b>View Votes</b>
          </button>
-         <button  class="button button-small button-assertive icon icon-left ion-trash-b" ng-click="deleteItem(x)">
+         <button  class="button button-small button-assertive icon icon-left ion-trash-b" ng-hide="!emailCheck(x)" ng-click="deleteItem(x)">
            <b>Delete Event</b>
          </button>
        </div>
