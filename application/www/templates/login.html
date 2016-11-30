@@ -1,19 +1,5 @@
-<ion-view view-title="Welcome to Encore" >
+<ion-view view-title="Encore" >
   <ion-content>
-
-
-    <!--max-height:100%;
-    position: absolute;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%; -->
-
 
     <center><img style="padding:10px; width: 100%;" src="img/image.jpg" alt=""></center>
      <div class="list list-inset">
@@ -21,19 +7,19 @@
         <span class="input-label">Email</span>
           <input type="text" ng-model="user.email" placeholder="e.g. bob@gmail.com">
       </label>
-      <label class="item item-input">
+
+       <label class="item item-input">
         <span class="input-label">Password</span>
         <input type="password" ng-model="user.password">
       </label>
 
       <div class="item item-input item-select">
-        <div class="input-label">
-          Select User Type
-        </div>
+        <div class="input-label"> User Type</div>
         <select
           ng-model="selectedUser"
           ng-init="selectedUser=users[0]"
-          ng-options="selectedUser.name for selectedUser in users"></select>
+          ng-options="selectedUser.name for selectedUser in users">
+        </select>
       </div>
 
 
@@ -43,7 +29,7 @@
 
       <h3 class="text-center assertive">{{ error.message }}</h3>
       <h3 ng-hide="isUserTypeSelected(selectedUser)" class="text-center assertive"> {{ msg }} </h3>
-      <h3 ng-if="firebaseUser" class="text-center balanced">Logged in as {{ firebaseUser.email }}<h3>
+      <h3 ng-if="firebaseUser" class="text-center balanced">Logged in as {{ firebaseUser.email }}</h3>
     </div>
 
 <!--<center><a class="button icon icon-right ion-chevron-right" ng-click="loginClicked()">Login</a></center>-->
