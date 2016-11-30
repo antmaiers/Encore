@@ -306,6 +306,7 @@ angular.module('starter', ['ionic','firebase'])
 
 .controller('host_events_management_Ctrl', function($scope, $rootScope,$firebaseArray, $state, Events){
   $scope.events = Events;
+  $rootScope.search = "";
 
   $scope.currentEvent = {
     email:""
@@ -340,12 +341,20 @@ angular.module('starter', ['ionic','firebase'])
     if($rootScope.email == x.email){
       $rootScope.validEmail = true;
     }
-
     return $rootScope.validEmail;
   };
 
+  $scope.searchCheck = function(x){
+    $scope.match = false;
+    //console.log("$rootScope.search= "+$rootScope.search);
+    if($rootScope.search == "" || $rootScope.search == x.eventName){
+      $scope.match = true;
+    }
+    return !($scope.match);
+  }
+
   $scope.searchClicked = function(){
-    if($scope.query.search != "") {
+    /*if($scope.query.search != "") {
       var ref = firebase.database().ref();
       $scope.events = $firebaseArray(ref.child("Events").orderByChild('eventName').equalTo($scope.query.search));
       //$scope.events = EventsQuery;
@@ -354,7 +363,9 @@ angular.module('starter', ['ionic','firebase'])
       //$scope.events = Events;
     }else{
       $scope.events = Events;
-    }
+    }*/
+
+    $rootScope.search = $scope.query.search;
   };
 
   //$scope.events = Events;
@@ -417,6 +428,7 @@ angular.module('starter', ['ionic','firebase'])
 .controller('voter_search_Ctrl', function($scope, $rootScope, $firebaseObject, $firebaseArray, $state, Events, EventsQuery){
 
   $scope.events = Events;
+  $rootScope.search = "";
 
   $scope.query = {
     search:""
@@ -440,9 +452,18 @@ angular.module('starter', ['ionic','firebase'])
     return !($scope.isClosed);
   };
 
+  $scope.searchCheck = function(x){
+    $scope.match = false;
+    //console.log("$rootScope.search= "+$rootScope.search);
+    if($rootScope.search == "" || $rootScope.search == x.eventName){
+      $scope.match = true;
+    }
+    return !($scope.match);
+  }
+
 
   $scope.searchClicked = function(){
-    if($scope.query.search != "") {
+    /*if($scope.query.search != "") {
       var ref = firebase.database().ref();
       $scope.events = $firebaseArray(ref.child("Events").orderByChild('eventName').equalTo($scope.query.search));
       //$scope.events = EventsQuery;
@@ -451,7 +472,8 @@ angular.module('starter', ['ionic','firebase'])
       //$scope.events = Events;
     }else{
       $scope.events = Events;
-    }
+    }*/
+    $rootScope.search = $scope.query.search;
   };
 
   $scope.cancelClicked = function(){
@@ -495,12 +517,12 @@ angular.module('starter', ['ionic','firebase'])
       $rootScope.currentEvent.option4_votes++;
     }
 
-    Events.$save($rootScope.currentEvent).then(function(x) {
+    Events.$save($rootScope.currentEvent);/*.then(function(x) {
         console.log("success: " + JSON.stringify(x));
       }, function(error) {
         console.log("error: " + JSON.stringify(error));
       }
-    )
+    )*/
 
       $scope.msg = "Vote Submitted";
 

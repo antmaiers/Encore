@@ -12,7 +12,7 @@
     </form>
 
     <ul class="list">
-     <li ng-repeat="x in events" class="item item-button-right">
+     <li ng-repeat="x in events" class="item item-button-right" ng-hide="searchCheck(x)">
        <div>
          <b style="font-size:20px">{{ x.eventName }}</b>, {{ x.eventLocation }}, {{ x.eventTime }}
        </div>
