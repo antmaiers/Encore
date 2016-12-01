@@ -218,32 +218,47 @@ angular.module('starter', ['ionic','firebase'])
     $scope.firebaseUser = null;
     $scope.error = null;
     $scope.confirmPassword = "";
+    $scope.confirmmail = "";
+    $scope.password_msg = "";
+    $scope.email_msg = "";
 
-    if ($scope.match == true){
-      Auth.$createUserWithEmailAndPassword($scope.user.email, $scope.user.password).then(function(firebaseUser) {
-        $scope.firebaseUser = firebaseUser;
-        console.log("User created successfully!");
+    if ($scope.emailMatch == true){
+      if($scope.passwordMatch == true) {
+        Auth.$createUserWithEmailAndPassword($scope.user.email, $scope.user.password).then(function (firebaseUser) {
+          $scope.firebaseUser = firebaseUser;
+          console.log("User created successfully!");
 
-          $timeout(function(){
+          $timeout(function () {
             $state.go('login');
           }, 1000);
 
-      }).catch(function(error) {
-        console.log("Error:", error);
-        $scope.error = error;
-      });
+        }).catch(function (error) {
+          console.log("Error:", error);
+          $scope.error = error;
+        });
+      }else{
+        $scope.password_msg = "Passwords MUST Match.";
+      }
 
     }else{
-      $scope.msg = "Passwords MUST Match.";
+      $scope.email_msg = "Emails MUST Match.";
     }
   };
 
   $scope.passwordsMatch = function(){
-    $scope.match = false;
+    $scope.passwordMatch = false;
     if ($scope.user.password == $scope.user.confirmPassword){
-      $scope.match = true;
+      $scope.passwordMatch = true;
     }
-    return $scope.match;
+    return $scope.passwordMatch;
+  }
+
+  $scope.emailsMatch = function(){
+    $scope.emailMatch = false;
+    if ($scope.user.email == $scope.user.confirmEmail){
+      $scope.emailMatch = true;
+    }
+    return $scope.emailMatch;
   }
 })
 
