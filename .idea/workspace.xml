@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0e0decf-44d2-45c5-b7f9-bba98abdcc27" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/www/templates/voter_submission.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/www/js/app.js" afterPath="$PROJECT_DIR$/application/www/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/www/templates/events_management.html" afterPath="$PROJECT_DIR$/application/www/templates/events_management.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/www/templates/host_create_event.html" afterPath="$PROJECT_DIR$/application/www/templates/host_create_event.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/www/templates/login.html" afterPath="$PROJECT_DIR$/application/www/templates/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/www/templates/poll_results.html" afterPath="$PROJECT_DIR$/application/www/templates/poll_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/www/templates/voter_search.html" afterPath="$PROJECT_DIR$/application/www/templates/voter_search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/www/templates/voter_vote.html" afterPath="$PROJECT_DIR$/application/www/templates/voter_vote.html" />
     </list>
     <ignored path="Encore.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,13 +26,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/www/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2430">
-              <caret line="162" column="2" selection-start-line="162" selection-start-column="2" selection-end-line="162" selection-end-column="2" />
+              <caret line="162" column="0" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
               <folding>
-                <marker date="1480631288000" expanded="true" signature="5058:5515" ph="{...}" />
+                <marker date="1480631667000" expanded="true" signature="5058:5515" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="host_create_event.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/www/templates/host_create_event.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+              <folding>
+                <element signature="n#style#0;n#h1#0;n#center#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -59,12 +64,12 @@
         <option value="$PROJECT_DIR$/application/READMEmilestone4.txt" />
         <option value="$PROJECT_DIR$/application/www/templates/create_account.html" />
         <option value="$PROJECT_DIR$/application/www/templates/events_management.html" />
-        <option value="$PROJECT_DIR$/application/www/templates/host_create_event.html" />
         <option value="$PROJECT_DIR$/application/www/templates/login.html" />
         <option value="$PROJECT_DIR$/application/www/templates/poll_results.html" />
         <option value="$PROJECT_DIR$/application/www/templates/voter_search.html" />
         <option value="$PROJECT_DIR$/application/www/templates/voter_vote.html" />
         <option value="$PROJECT_DIR$/application/www/js/app.js" />
+        <option value="$PROJECT_DIR$/application/www/templates/host_create_event.html" />
       </list>
     </option>
   </component>
@@ -277,12 +282,12 @@
       <workItem from="1480482308646" duration="563000" />
       <workItem from="1480548009339" duration="4090000" />
       <workItem from="1480627994050" duration="17000" />
-      <workItem from="1480629111008" duration="1726000" />
+      <workItem from="1480629111008" duration="2163000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51506000" />
+    <option name="totallyTimeSpent" value="51943000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="23" width="1093" height="1027" extended-state="0" />
@@ -375,7 +380,7 @@
         <state relative-caret-position="4965">
           <caret line="331" column="42" selection-start-line="331" selection-start-column="42" selection-end-line="331" selection-end-column="42" />
           <folding>
-            <marker date="1480631288000" expanded="true" signature="5058:5515" ph="{...}" />
+            <marker date="1480631667000" expanded="true" signature="5058:5515" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -427,7 +432,7 @@
         <state relative-caret-position="4125">
           <caret line="275" column="4" selection-start-line="275" selection-start-column="4" selection-end-line="275" selection-end-column="4" />
           <folding>
-            <marker date="1480631288000" expanded="true" signature="5058:5515" ph="{...}" />
+            <marker date="1480631667000" expanded="true" signature="5058:5515" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -465,7 +470,7 @@
         <state relative-caret-position="2400">
           <caret line="160" column="22" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
           <folding>
-            <marker date="1480631288000" expanded="true" signature="5058:5515" ph="{...}" />
+            <marker date="1480631667000" expanded="true" signature="5058:5515" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -510,7 +515,7 @@
         <state relative-caret-position="2655">
           <caret line="177" column="4" selection-start-line="177" selection-start-column="4" selection-end-line="177" selection-end-column="4" />
           <folding>
-            <marker date="1480631288000" expanded="true" signature="5058:5515" ph="{...}" />
+            <marker date="1480631667000" expanded="true" signature="5058:5515" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -593,16 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/www/templates/host_create_event.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#center#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/www/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -610,14 +605,6 @@
           <folding>
             <element signature="n#style#0;n#img#0;n#center#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/www/templates/create_account.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -659,12 +646,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/www/templates/create_account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/www/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2430">
-          <caret line="162" column="2" selection-start-line="162" selection-start-column="2" selection-end-line="162" selection-end-column="2" />
+          <caret line="162" column="0" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
           <folding>
-            <marker date="1480631288000" expanded="true" signature="5058:5515" ph="{...}" />
+            <marker date="1480631667000" expanded="true" signature="5058:5515" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/www/templates/host_create_event.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#center#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

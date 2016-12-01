@@ -160,7 +160,7 @@ angular.module('starter', ['ionic','firebase'])
   ];
 
   $scope.user = {};
-  
+
   $scope.signIn = function(item){
     console.log("$scope.user:" + JSON.stringify($scope.user));
 
