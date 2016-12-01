@@ -215,7 +215,7 @@ angular.module('starter', ['ionic','firebase'])
           }
 
           $rootScope.loggedIn = true;
-          $rootScope.email = $scope.user.email;
+          $rootScope.email = $scope.user.email.toUpperCase();
           console.log("$rootScope.email= "+$rootScope.email);
 
       }).catch(function(error) {
@@ -247,6 +247,7 @@ angular.module('starter', ['ionic','firebase'])
     console.log("$scope.user:" + JSON.stringify($scope.user));
     $scope.firebaseUser = null;
     $scope.error = null;
+    $scope.confirmPassword = "";
 
     if ($scope.match == true){
       Auth.$createUserWithEmailAndPassword($scope.user.email, $scope.user.password).then(function(firebaseUser) {
@@ -323,22 +324,9 @@ angular.module('starter', ['ionic','firebase'])
     $state.go("host_create_event")
   };
 
-  $scope.emailClicked = function(x){
-    $rootScope.validEmail = false;
-    //console.log("emailClicked()");
-    //console.log("$scope.currentEvent.email = "+$scope.currentEvent.email);
-   // console.log("x.email="+x.email);
-    if($scope.currentEvent.email == x.email){
-      $rootScope.validEmail = true;
-    }else{
-      $scope.message = "Email is incorrect";
-    }
-  };
-
   $scope.emailCheck = function(x){
     $rootScope.validEmail = false;
-
-    if($rootScope.email == x.email){
+    if($rootScope.email == x.email.toUpperCase()){
       $rootScope.validEmail = true;
     }
     return $rootScope.validEmail;
@@ -346,32 +334,22 @@ angular.module('starter', ['ionic','firebase'])
 
   $scope.searchCheck = function(x){
     $scope.match = false;
-    //console.log("$rootScope.search= "+$rootScope.search);
-    if($rootScope.search == "" || $rootScope.search == x.eventName){
+
+    var str = x.eventName.toUpperCase();
+    var n = str.includes($rootScope.search);
+
+    if(n == true){
       $scope.match = true;
     }
+
     return !($scope.match);
   }
 
   $scope.searchClicked = function(){
-    /*if($scope.query.search != "") {
-      var ref = firebase.database().ref();
-      $scope.events = $firebaseArray(ref.child("Events").orderByChild('eventName').equalTo($scope.query.search));
-      //$scope.events = EventsQuery;
-      //$rootScope.query = $scope.query.search;
-      //console.log("rootScope.query= "+$rootScope.query);
-      //$scope.events = Events;
-    }else{
-      $scope.events = Events;
-    }*/
-
-    $rootScope.search = $scope.query.search;
+    $rootScope.search = $scope.query.search.toUpperCase();
   };
 
-  //$scope.events = Events;
-
   $scope.startClicked = function(x){
-    console.log("start clicked for event: " + x.eventName);
     $rootScope.currentEvent = x;
     $rootScope.currentEvent.state = "open";
     Events.$save($rootScope.currentEvent);
@@ -379,7 +357,6 @@ angular.module('starter', ['ionic','firebase'])
   };
 
   $scope.stopClicked = function(x){
-    console.log("stop clicked for event: " + x.eventName);
     $rootScope.currentEvent = x;
     $rootScope.currentEvent.state = "closed"
     Events.$save($rootScope.currentEvent);
@@ -394,7 +371,6 @@ angular.module('starter', ['ionic','firebase'])
 
   $scope.deleteItem = function(x){
     $scope.events.$remove(x);
-
   };
 
 
@@ -411,10 +387,7 @@ angular.module('starter', ['ionic','firebase'])
 
 .controller('poll_results_Ctrl', function($scope, $rootScope, $state){
 
-  console.log("Currentevent: "+$rootScope.currentEvent.eventName);
-
   $scope.homeClicked = function(){
-    console.log("$rootScope.user_type= "+$rootScope.user_type);
     console.log("home clicked");
     if ($rootScope.user_type == "Voter"){
       $state.go("voter_search")
@@ -425,7 +398,7 @@ angular.module('starter', ['ionic','firebase'])
   };
 })
 
-.controller('voter_search_Ctrl', function($scope, $rootScope, $firebaseObject, $firebaseArray, $state, Events, EventsQuery){
+.controller('voter_search_Ctrl', function($scope, $rootScope, $firebaseObject, $firebaseArray, $state, Events){
 
   $scope.events = Events;
   $rootScope.search = "";
@@ -436,7 +409,6 @@ angular.module('starter', ['ionic','firebase'])
 
   $scope.open_check = function(x){
       $scope.isOpen = false;
-
       if(x.state == "open"){
         $scope.isOpen = true;
       }
@@ -445,7 +417,6 @@ angular.module('starter', ['ionic','firebase'])
 
   $scope.closed_check = function(x){
     $scope.isClosed = false;
-
     if(x.state == "closed"){
       $scope.isClosed = true;
     }
@@ -454,10 +425,14 @@ angular.module('starter', ['ionic','firebase'])
 
   $scope.searchCheck = function(x){
     $scope.match = false;
-    //console.log("$rootScope.search= "+$rootScope.search);
-    if($rootScope.search == "" || $rootScope.search == x.eventName){
+
+    var str = x.eventName.toUpperCase();
+    var n = str.includes($rootScope.search);
+
+    if(n == true){
       $scope.match = true;
     }
+
     return !($scope.match);
   }
 
@@ -473,7 +448,7 @@ angular.module('starter', ['ionic','firebase'])
     }else{
       $scope.events = Events;
     }*/
-    $rootScope.search = $scope.query.search;
+    $rootScope.search = $scope.query.search.toUpperCase();
   };
 
   $scope.cancelClicked = function(){
@@ -483,13 +458,11 @@ angular.module('starter', ['ionic','firebase'])
 
 
   $scope.voteClicked = function(x){
-      console.log("vote clicked for event: " + x.eventName);
       $rootScope.currentEvent = x;
       $state.go("voter_vote")
   };
 
   $scope.resultsClicked = function(x){
-    console.log("results clicked for event: " + x.eventName);
     $rootScope.currentEvent = x;
     $state.go("poll_results")
   };
@@ -497,16 +470,11 @@ angular.module('starter', ['ionic','firebase'])
 
 .controller('voter_vote_Ctrl', function($scope, $rootScope, $state, $timeout, Events){
 
-  console.log("Currentevent: "+$rootScope.currentEvent.eventName);
-
   $scope.backClicked = function(){;
     $state.go("voter_search")
   };
 
   $scope.submitClicked = function(vote){
-
-    console.log("vote = "+vote);
-
     if(vote == 1){
       $rootScope.currentEvent.option1_votes++;
     }else if (vote == 2){
@@ -517,14 +485,9 @@ angular.module('starter', ['ionic','firebase'])
       $rootScope.currentEvent.option4_votes++;
     }
 
-    Events.$save($rootScope.currentEvent);/*.then(function(x) {
-        console.log("success: " + JSON.stringify(x));
-      }, function(error) {
-        console.log("error: " + JSON.stringify(error));
-      }
-    )*/
+    Events.$save($rootScope.currentEvent);
 
-      $scope.msg = "Vote Submitted";
+    $scope.msg = "Vote Submitted";
 
     $timeout(function(){
       $state.go('voter_search');
@@ -545,22 +508,14 @@ angular.module('starter', ['ionic','firebase'])
   }
 ])
 
-  .factory("Events", ["$firebaseArray",
-    function($firebaseArray) {
-      // create a reference to the database where we will store our data
-      var ref = firebase.database().ref();
-
-      return $firebaseArray(ref.child("Events"));//.orderByChild('eventName').equalTo("test"));
-
-    }
-  ])
-
-.factory("EventsQuery", ["$firebaseArray",
-  function($firebaseArray, $rootScope) {
+.factory("Events", ["$firebaseArray",
+  function($firebaseArray) {
     // create a reference to the database where we will store our data
     var ref = firebase.database().ref();
 
-    return $firebaseArray(ref.child("EventsQuery").orderByChild('eventName').equalTo("test"));
+    return $firebaseArray(ref.child("Events"));
   }
 ]);
+
+
 
