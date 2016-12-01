@@ -21,19 +21,16 @@
        <div style="padding:3px">"{{ x.option3 }}"</div>
        <div style="padding:3px">"{{ x.option4 }}"</div>
 
-
-
-       <div> <button style="padding:5px; font-size:20px" class="button button-small button-royal icon ion-person-stalker" ng-hide="open_check(x)" ng-click="voteClicked(x)">
-         Vote
-       </button>
-       <button style="padding:5px; font-size:20px" class="button button-small button-royal icon ion-pie-graph" ng-hide="closed_check(x)" ng-click="resultsClicked(x)">
-         Results
-       </button>
+       <div>
+         <button style="padding:5px; font-size:20px" class="button button-small button-royal icon ion-person-stalker" ng-hide="open_check(x)" ng-click="voteClicked(x)">
+          Vote
+         </button>
+         <button style="padding:5px; font-size:20px" class="button button-small button-royal icon ion-pie-graph" ng-hide="closed_check(x)" ng-click="resultsClicked(x)">
+          Results
+         </button>
        </div>
      </li>
    </ul>
-
-
 
   </ion-content>
 </ion-view>

@@ -4,57 +4,47 @@
         Create Event
     </h1></center>
 
-        <div class="list list-inset">
-          <label class="item item-input">
-            <span class="input-label">Event Name:</span>
-            <input type="text" ng-model="event.eventName">
-          </label>
-          <label class="item item-input">
-            <span class="input-label">Event Location:</span>
-            <input type="text" ng-model="event.eventLocation">
-          </label>
-         <!-- <div class="list"> -->
-          <label class="item item-input">
-            <span class="input-label">Encore Start Time:</span>
-            <input type="text" ng-model="event.eventTime">
-          </label>
-        </div>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <span class="input-label">Event Name:</span>
+        <input type="text" ng-model="event.eventName">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Event Location:</span>
+        <input type="text" ng-model="event.eventLocation">
+      </label>
 
-      <!--<div>
-        <left>
-          <h3 style="color:blueviolet; padding:10px" class="title">
-            Encore Song Options:
-          </h3>
-        </left>
-      </div>-->
+      <label class="item item-input">
+        <span class="input-label">Encore Start Time:</span>
+        <input type="text" ng-model="event.eventTime">
+      </label>
+    </div>
 
-        <div class="list list-inset">
-          <label class="item item-input">
-            <span class="input-label">Song Option 1:</span>
-            <input type="text" ng-model="event.option1">
-          </label>
-          <label class="item item-input">
-            <span class="input-label">Song Option 2:</span>
-            <input type="text" ng-model="event.option2">
-          </label>
-          <label class="item item-input">
-            <span class="input-label">Song Option 3:</span>
-            <input type="text" ng-model="event.option3">
-          </label>
-          <label class="item item-input">
-            <span class="input-label">Song Option 4:</span>
-            <input type="text" ng-model="event.option4">
-          </label>
-      </div>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <span class="input-label">Song Option 1:</span>
+        <input type="text" ng-model="event.option1">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Song Option 2:</span>
+        <input type="text" ng-model="event.option2">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Song Option 3:</span>
+        <input type="text" ng-model="event.option3">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Song Option 4:</span>
+        <input type="text" ng-model="event.option4">
+      </label>
+    </div>
 
-      <div>
-        <center>
-          <button class="button button-outline button-royal icon icon-left ion-chevron-left" ng-click="backClicked()"><b>Back</b></b></button>
-          <button class="button button-royal icon icon-right ion-chevron-right" ng-click="submitClicked(event)"><b>SUBMIT</b></button>
-        </center>
-      </div>
-
-
+    <div>
+      <center>
+        <button class="button button-outline button-royal icon icon-left ion-chevron-left" ng-click="backClicked()"><b>Back</b></b></button>
+        <button class="button button-royal icon icon-right ion-chevron-right" ng-click="submitClicked(event)"><b>SUBMIT</b></button>
+      </center>
+    </div>
 
   </ion-content>
 </ion-view>

@@ -1,20 +1,11 @@
 
 <ion-view view-title="Encore">
-
   <ion-nav-buttons side="left">
       <button style="font-size:14px" class="button button-royal icon icon-right ion-plus-circled" ng-click="newEventClicked()"><b>New Event</b>
       </button>
-   </ion-nav-buttons>
-
+  </ion-nav-buttons>
 
  <ion-content>
-
-
-
- 	<!--<h1 style="color:blueviolet; padding:5px" class="title">
-        Current Events:
-    </h1> -->
-
    <form ng-submit="searchClicked()" class="bar bar-header item-input-inset">
      <label class="item-input-wrapper">
        <i class="icon ion-ios-search placeholer-icon"></i>
@@ -24,7 +15,6 @@
        <b>Search</b>
      </button>
    </form>
-
 
    <ul class="list">
      <li ng-repeat="x in events" class="item item-button-right" ng-hide="searchCheck(x)">
@@ -39,17 +29,6 @@
        <p></p>
 
        <div>
-        <!-- <form ng-submit="emailClicked(x)" ng-hide="emailCheck(x)" class="bar bar-header item-input-inset">
-           <label class="item-input-wrapper">
-             <input type="text" placeholder="Enter email to edit..." ng-model="currentEvent.email">
-           </label>
-           <button class="button button-royal">
-             Edit
-           </button>
-         </form>
-
-         <h2 class="text-center assertive">{{ message }}</h2> -->
-
          <button class="button button-small button-royal icon icon-left ion-clock" ng-hide="!emailCheck(x)" ng-click="startClicked(x)">
            <b>Start Event</b>
          </button>
@@ -70,8 +49,6 @@
 
      </li>
    </ul>
-
-   <!--<center><a class="button button-royal icon icon-right ion-plus-circled" ng-click="newEventClicked()">Create New Event</a></center>-->
 
   </ion-content>
 </ion-view>

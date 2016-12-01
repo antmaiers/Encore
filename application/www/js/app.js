@@ -131,21 +131,6 @@ angular.module('starter', ['ionic','firebase'])
     }
   })
 
-  .state('voter_submission', {
-    url: '/voter_submission',
-    templateUrl: 'templates/voter_submission.html',
-    controller: 'voter_submission_Ctrl',
-    resolve: {
-      // controller will not be loaded until $requireSignIn resolves
-      // Auth refers to our $firebaseAuth wrapper in the factory below
-      "currentAuth": ["Auth", function(Auth) {
-        // $requireSignIn returns a promise so the resolve waits for it to complete
-        // If the promise is rejected, it will throw a $stateChangeError (see above)
-        return Auth.$requireSignIn();
-      }]
-    }
-  })
-
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');
 
@@ -175,8 +160,7 @@ angular.module('starter', ['ionic','firebase'])
   ];
 
   $scope.user = {};
-
-
+  
   $scope.signIn = function(item){
     console.log("$scope.user:" + JSON.stringify($scope.user));
 
@@ -457,13 +441,6 @@ angular.module('starter', ['ionic','firebase'])
     $timeout(function(){
       $state.go('voter_search');
     }, 1000);
-  };
-})
-
-.controller('voter_submission_Ctrl', function($scope, $state){
-  $scope.homeClicked = function(){
-    console.log("home clicked");
-    $state.go("voter_search")
   };
 })
 

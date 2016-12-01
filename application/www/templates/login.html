@@ -1,8 +1,7 @@
 <ion-view view-title="Encore" >
   <ion-content>
-
     <center><img style="padding:10px; width: 100%;" src="img/image.jpg" alt=""></center>
-     <div class="list list-inset">
+    <div class="list list-inset">
       <label class="item item-input">
         <span class="input-label">Email</span>
           <input type="text" ng-model="user.email" placeholder="e.g. bob@gmail.com">
@@ -22,34 +21,14 @@
         </select>
       </div>
 
-
       <button class="button button-full button-positive" ng-click="signIn(selectedUser)"><b>Login</b></button>
       <button class="button button-full button-royal" ng-click="createAccount()"><b>New User</b></button>
-
 
       <h3 class="text-center assertive">{{ error.message }}</h3>
       <h3 ng-hide="isUserTypeSelected(selectedUser)" class="text-center assertive"> {{ msg }} </h3>
       <h3 ng-if="firebaseUser" class="text-center balanced">Logged in as {{ firebaseUser.email }}</h3>
     </div>
 
-<!--<center><a class="button icon icon-right ion-chevron-right" ng-click="loginClicked()">Login</a></center>-->
-
-
-
   </ion-content>
 </ion-view>
 
-
-<!--<p></p>
-<p></p>
-<center>
-  <div>
-    <button class="button button-large button-positive icon icon-left ion-log-in" ng-click="signIn(selectedUser)">Login</button>
-  </div>
-
-  <p></p>
-
-  <div>
-    <button class="button button-large button-royal icon icon-left ion-plus-circled" ng-click="createAccount()">New User</button>
-  </div>
-</center>-->

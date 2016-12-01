@@ -1,41 +1,34 @@
 <ion-view view-title="Encore">
   <ion-content padding="true" class="has-header">
-        <!--<h1 style="padding:10px; color:blueviolet">
-            <center>
-              Results for: {{ currentEvent.eventName }}
-            </center>
-        </h1>-->
 
-        <h2 style="color:blueviolet; padding:15px 0px 0px 15px">
-          {{ currentEvent.eventName }}
-        </h2>
+    <h2 style="color:blueviolet; padding:15px 0px 0px 15px">
+      {{ currentEvent.eventName }}
+    </h2>
 
-        <div class="list list-inset">
-          <div style="font-size:15px" class="item">
-            <b>{{ currentEvent.option1_votes }} votes</b> : "{{ currentEvent.option1 }}"
-          </div>
+    <div class="list list-inset">
+      <div style="font-size:15px" class="item">
+        <b>{{ currentEvent.option1_votes }} votes</b> : "{{ currentEvent.option1 }}"
+      </div>
 
-          <div style="font-size:15px" class="item">
-            <b>{{ currentEvent.option2_votes }} votes</b> : "{{ currentEvent.option2 }}"
-          </div>
+      <div style="font-size:15px" class="item">
+        <b>{{ currentEvent.option2_votes }} votes</b> : "{{ currentEvent.option2 }}"
+      </div>
 
-          <div style="font-size:15px" class="item">
-            <b>{{ currentEvent.option3_votes }} votes</b> : "{{ currentEvent.option3 }}"
-          </div>
+      <div style="font-size:15px" class="item">
+        <b>{{ currentEvent.option3_votes }} votes</b> : "{{ currentEvent.option3 }}"
+      </div>
 
-          <div style="font-size:15px" class="item">
-            <b>{{ currentEvent.option4_votes }} votes</b> : "{{ currentEvent.option4 }}"
-          </div>
-        </div>
+      <div style="font-size:15px" class="item">
+        <b>{{ currentEvent.option4_votes }} votes</b> : "{{ currentEvent.option4 }}"
+      </div>
+    </div>
 
 
-        <center>
-          <button class="button button-large button-royal icon icon-left ion-chevron-left" ng-click="homeClicked()">
-            Back to Events
-          </button>
-        </center>
-
-
+    <center>
+      <button class="button button-large button-royal icon icon-left ion-chevron-left" ng-click="homeClicked()">
+        Back to Events
+      </button>
+    </center>
 
   </ion-content>
 </ion-view>
