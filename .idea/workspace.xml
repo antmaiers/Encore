@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0e0decf-44d2-45c5-b7f9-bba98abdcc27" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/www/templates/host_poll_in_progress.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/www/js/app.js" afterPath="$PROJECT_DIR$/application/www/js/app.js" />
     </list>
     <ignored path="Encore.iws" />
@@ -28,10 +29,10 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/www/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="610">
-              <caret line="328" column="50" selection-start-line="328" selection-start-column="50" selection-end-line="328" selection-end-column="50" />
+            <state relative-caret-position="5100">
+              <caret line="340" column="42" selection-start-line="340" selection-start-column="42" selection-end-line="340" selection-end-column="42" />
               <folding>
-                <marker date="1480551380000" expanded="true" signature="6245:6703" ph="{...}" />
+                <marker date="1480551687000" expanded="true" signature="5642:6100" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -325,18 +326,18 @@
       <workItem from="1480452593385" duration="1000" />
       <workItem from="1480480778590" duration="827000" />
       <workItem from="1480482308646" duration="563000" />
-      <workItem from="1480548009339" duration="3241000" />
+      <workItem from="1480548009339" duration="3532000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48914000" />
+    <option name="totallyTimeSpent" value="49205000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="50" y="23" width="1093" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17070895" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19216418" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -430,7 +431,7 @@
         <state relative-caret-position="4965">
           <caret line="331" column="42" selection-start-line="331" selection-start-column="42" selection-end-line="331" selection-end-column="42" />
           <folding>
-            <marker date="1480551380000" expanded="true" signature="6245:6703" ph="{...}" />
+            <marker date="1480551687000" expanded="true" signature="5642:6100" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -482,7 +483,7 @@
         <state relative-caret-position="4125">
           <caret line="275" column="4" selection-start-line="275" selection-start-column="4" selection-end-line="275" selection-end-column="4" />
           <folding>
-            <marker date="1480551380000" expanded="true" signature="6245:6703" ph="{...}" />
+            <marker date="1480551687000" expanded="true" signature="5642:6100" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -520,7 +521,7 @@
         <state relative-caret-position="2400">
           <caret line="160" column="22" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
           <folding>
-            <marker date="1480551380000" expanded="true" signature="6245:6703" ph="{...}" />
+            <marker date="1480551687000" expanded="true" signature="5642:6100" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -565,7 +566,7 @@
         <state relative-caret-position="2655">
           <caret line="177" column="4" selection-start-line="177" selection-start-column="4" selection-end-line="177" selection-end-column="4" />
           <folding>
-            <marker date="1480551380000" expanded="true" signature="6245:6703" ph="{...}" />
+            <marker date="1480551687000" expanded="true" signature="5642:6100" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -703,10 +704,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/www/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="328" column="50" selection-start-line="328" selection-start-column="50" selection-end-line="328" selection-end-column="50" />
+        <state relative-caret-position="5100">
+          <caret line="340" column="42" selection-start-line="340" selection-start-column="42" selection-end-line="340" selection-end-column="42" />
           <folding>
-            <marker date="1480551380000" expanded="true" signature="6245:6703" ph="{...}" />
+            <marker date="1480551687000" expanded="true" signature="5642:6100" ph="{...}" />
           </folding>
         </state>
       </provider>

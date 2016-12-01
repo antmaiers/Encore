@@ -84,20 +84,6 @@ angular.module('starter', ['ionic','firebase'])
       }]
     }
   })
-  .state('host_poll_in_progress', {
-    url: '/host_poll_in_progress',
-    templateUrl: 'templates/host_poll_in_progress.html',
-    controller: 'host_poll_in_progress_Ctrl',
-    resolve: {
-      // controller will not be loaded until $requireSignIn resolves
-      // Auth refers to our $firebaseAuth wrapper in the factory below
-      "currentAuth": ["Auth", function(Auth) {
-        // $requireSignIn returns a promise so the resolve waits for it to complete
-        // If the promise is rejected, it will throw a $stateChangeError (see above)
-        return Auth.$requireSignIn();
-      }]
-    }
-  })
 
   .state('poll_results', {
     url: '/poll_results',
@@ -353,14 +339,12 @@ angular.module('starter', ['ionic','firebase'])
     $rootScope.currentEvent = x;
     $rootScope.currentEvent.state = "open";
     Events.$save($rootScope.currentEvent);
-    //$state.go("host_poll_in_progress")
   };
 
   $scope.stopClicked = function(x){
     $rootScope.currentEvent = x;
     $rootScope.currentEvent.state = "closed"
     Events.$save($rootScope.currentEvent);
-    //$state.go("host_poll_in_progress")
   };
 
   $scope.viewVotesClicked = function(x){
@@ -375,15 +359,6 @@ angular.module('starter', ['ionic','firebase'])
 
 
 })
-
-.controller('host_poll_in_progress_Ctrl', function($scope, $state){
-  $scope.stopClicked = function(){
-    console.log("stop clicked");
-    $state.go("poll_results")
-  };
-})
-
-
 
 .controller('poll_results_Ctrl', function($scope, $rootScope, $state){
 
@@ -438,16 +413,6 @@ angular.module('starter', ['ionic','firebase'])
 
 
   $scope.searchClicked = function(){
-    /*if($scope.query.search != "") {
-      var ref = firebase.database().ref();
-      $scope.events = $firebaseArray(ref.child("Events").orderByChild('eventName').equalTo($scope.query.search));
-      //$scope.events = EventsQuery;
-      //$rootScope.query = $scope.query.search;
-      //console.log("rootScope.query= "+$rootScope.query);
-      //$scope.events = Events;
-    }else{
-      $scope.events = Events;
-    }*/
     $rootScope.search = $scope.query.search.toUpperCase();
   };
 
