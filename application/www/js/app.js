@@ -470,7 +470,7 @@ angular.module('starter', ['ionic','firebase'])
     // create a reference to the database where we will store our data
     var ref = firebase.database().ref();
 
-    return $firebaseArray(ref.child("Events"));
+    return $firebaseArray(ref.child("Events").orderByChild('eventName'));
   }
 ]);
 
