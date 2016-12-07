@@ -2,125 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0e0decf-44d2-45c5-b7f9-bba98abdcc27" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/.bowerrc" afterPath="$PROJECT_DIR$/Encore/.bowerrc" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/.editorconfig" afterPath="$PROJECT_DIR$/Encore/.editorconfig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/.gitignore" afterPath="$PROJECT_DIR$/Encore/.gitignore" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/.idea/application.iml" afterPath="$PROJECT_DIR$/Encore/.idea/application.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/Encore/.idea/jsLibraryMappings.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/.idea/modules.xml" afterPath="$PROJECT_DIR$/Encore/.idea/modules.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/.idea/workspace.xml" afterPath="$PROJECT_DIR$/Encore/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/README.txt" afterPath="$PROJECT_DIR$/Encore/README.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/bower.json" afterPath="$PROJECT_DIR$/Encore/bower.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/config.xml" afterPath="$PROJECT_DIR$/Encore/config.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/gulpfile.js" afterPath="$PROJECT_DIR$/Encore/gulpfile.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/hooks/README.md" afterPath="$PROJECT_DIR$/Encore/hooks/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/hooks/after_prepare/010_add_platform_class.js" afterPath="$PROJECT_DIR$/Encore/hooks/after_prepare/010_add_platform_class.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/ionic.config.json" afterPath="$PROJECT_DIR$/Encore/ionic.config.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/package.json" afterPath="$PROJECT_DIR$/Encore/package.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/android/splash/drawable-land-hdpi-screen.png" afterPath="$PROJECT_DIR$/Encore/resources/android/splash/drawable-land-hdpi-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/android/splash/drawable-land-ldpi-screen.png" afterPath="$PROJECT_DIR$/Encore/resources/android/splash/drawable-land-ldpi-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/android/splash/drawable-land-mdpi-screen.png" afterPath="$PROJECT_DIR$/Encore/resources/android/splash/drawable-land-mdpi-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/android/splash/drawable-land-xhdpi-screen.png" afterPath="$PROJECT_DIR$/Encore/resources/android/splash/drawable-land-xhdpi-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/android/splash/drawable-land-xxhdpi-screen.png" afterPath="$PROJECT_DIR$/Encore/resources/android/splash/drawable-land-xxhdpi-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/android/splash/drawable-land-xxxhdpi-screen.png" afterPath="$PROJECT_DIR$/Encore/resources/android/splash/drawable-land-xxxhdpi-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/android/splash/drawable-port-hdpi-screen.png" afterPath="$PROJECT_DIR$/Encore/resources/android/splash/drawable-port-hdpi-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/android/splash/drawable-port-ldpi-screen.png" afterPath="$PROJECT_DIR$/Encore/resources/android/splash/drawable-port-ldpi-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/android/splash/drawable-port-mdpi-screen.png" afterPath="$PROJECT_DIR$/Encore/resources/android/splash/drawable-port-mdpi-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/android/splash/drawable-port-xhdpi-screen.png" afterPath="$PROJECT_DIR$/Encore/resources/android/splash/drawable-port-xhdpi-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/android/splash/drawable-port-xxhdpi-screen.png" afterPath="$PROJECT_DIR$/Encore/resources/android/splash/drawable-port-xxhdpi-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/android/splash/drawable-port-xxxhdpi-screen.png" afterPath="$PROJECT_DIR$/Encore/resources/android/splash/drawable-port-xxxhdpi-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/icon.png" afterPath="$PROJECT_DIR$/Encore/resources/icon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/ios/splash/Default-568h@2x~iphone.png" afterPath="$PROJECT_DIR$/Encore/resources/ios/splash/Default-568h@2x~iphone.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/ios/splash/Default-667h.png" afterPath="$PROJECT_DIR$/Encore/resources/ios/splash/Default-667h.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/ios/splash/Default-736h.png" afterPath="$PROJECT_DIR$/Encore/resources/ios/splash/Default-736h.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/ios/splash/Default-Landscape-736h.png" afterPath="$PROJECT_DIR$/Encore/resources/ios/splash/Default-Landscape-736h.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/ios/splash/Default-Landscape@2x~ipad.png" afterPath="$PROJECT_DIR$/Encore/resources/ios/splash/Default-Landscape@2x~ipad.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/ios/splash/Default-Landscape~ipad.png" afterPath="$PROJECT_DIR$/Encore/resources/ios/splash/Default-Landscape~ipad.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/ios/splash/Default-Portrait@2x~ipad.png" afterPath="$PROJECT_DIR$/Encore/resources/ios/splash/Default-Portrait@2x~ipad.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/ios/splash/Default-Portrait~ipad.png" afterPath="$PROJECT_DIR$/Encore/resources/ios/splash/Default-Portrait~ipad.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/ios/splash/Default@2x~iphone.png" afterPath="$PROJECT_DIR$/Encore/resources/ios/splash/Default@2x~iphone.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/ios/splash/Default~iphone.png" afterPath="$PROJECT_DIR$/Encore/resources/ios/splash/Default~iphone.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/resources/splash.png" afterPath="$PROJECT_DIR$/Encore/resources/splash.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/scss/ionic.app.scss" afterPath="$PROJECT_DIR$/Encore/scss/ionic.app.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/css/style.css" afterPath="$PROJECT_DIR$/Encore/www/css/style.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/img/image.jpg" afterPath="$PROJECT_DIR$/Encore/www/img/image.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/img/ionic.png" afterPath="$PROJECT_DIR$/Encore/www/img/ionic.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/index.html" afterPath="$PROJECT_DIR$/Encore/www/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/js/app.js" afterPath="$PROJECT_DIR$/Encore/www/js/app.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/css/ionic.css" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/css/ionic.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/css/ionic.min.css" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/css/ionic.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/fonts/ionicons.eot" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/fonts/ionicons.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/fonts/ionicons.svg" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/fonts/ionicons.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/fonts/ionicons.ttf" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/fonts/ionicons.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/fonts/ionicons.woff" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/fonts/ionicons.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/js/angular-ui/angular-ui-router.js" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/js/angular-ui/angular-ui-router.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/js/angular-ui/angular-ui-router.min.js" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/js/angular-ui/angular-ui-router.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/js/angular/angular-animate.js" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/js/angular/angular-animate.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/js/angular/angular-animate.min.js" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/js/angular/angular-animate.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/js/angular/angular-resource.js" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/js/angular/angular-resource.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/js/angular/angular-resource.min.js" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/js/angular/angular-resource.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/js/angular/angular-sanitize.js" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/js/angular/angular-sanitize.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/js/angular/angular-sanitize.min.js" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/js/angular/angular-sanitize.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/js/angular/angular.js" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/js/angular/angular.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/js/angular/angular.min.js" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/js/angular/angular.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/js/ionic-angular.js" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/js/ionic-angular.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/js/ionic-angular.min.js" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/js/ionic-angular.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/js/ionic.bundle.js" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/js/ionic.bundle.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/js/ionic.bundle.min.js" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/js/ionic.bundle.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/js/ionic.js" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/js/ionic.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/js/ionic.min.js" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/js/ionic.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_action-sheet.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_action-sheet.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_animations.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_animations.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_backdrop.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_backdrop.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_badge.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_badge.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_bar.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_bar.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_button-bar.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_button-bar.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_button.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_button.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_checkbox.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_checkbox.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_form.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_form.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_grid.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_grid.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_items.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_items.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_list.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_list.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_loading.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_loading.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_menu.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_menu.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_mixins.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_mixins.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_modal.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_modal.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_platform.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_platform.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_popover.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_popover.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_popup.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_popup.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_progress.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_progress.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_radio.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_radio.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_range.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_range.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_refresher.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_refresher.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_reset.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_reset.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_scaffolding.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_scaffolding.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_select.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_select.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_slide-box.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_slide-box.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_slides.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_slides.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_spinner.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_spinner.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_tabs.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_tabs.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_toggle.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_toggle.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_transitions.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_transitions.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_type.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_type.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_util.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_util.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/_variables.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/_variables.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/ionic.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/ionic.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/ionicons/_ionicons-font.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/ionicons/_ionicons-font.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/ionicons/_ionicons-icons.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/ionicons/_ionicons-icons.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/ionicons/_ionicons-variables.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/ionicons/_ionicons-variables.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/scss/ionicons/ionicons.scss" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/scss/ionicons/ionicons.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/lib/ionic/version.json" afterPath="$PROJECT_DIR$/Encore/www/lib/ionic/version.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/manifest.json" afterPath="$PROJECT_DIR$/Encore/www/manifest.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/service-worker.js" afterPath="$PROJECT_DIR$/Encore/www/service-worker.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/templates/create_account.html" afterPath="$PROJECT_DIR$/Encore/www/templates/create_account.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/templates/events_management.html" afterPath="$PROJECT_DIR$/Encore/www/templates/events_management.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/templates/host_create_event.html" afterPath="$PROJECT_DIR$/Encore/www/templates/host_create_event.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/templates/login.html" afterPath="$PROJECT_DIR$/Encore/www/templates/login.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/templates/poll_results.html" afterPath="$PROJECT_DIR$/Encore/www/templates/poll_results.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/templates/voter_search.html" afterPath="$PROJECT_DIR$/Encore/www/templates/voter_search.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/www/templates/voter_vote.html" afterPath="$PROJECT_DIR$/Encore/www/templates/voter_vote.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Encore.iml" afterPath="$PROJECT_DIR$/.idea/Encore.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Encore.iws" />
@@ -143,7 +24,18 @@
     <favorites_list name="Encore" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="README.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Encore/README.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -176,13 +68,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/Encore/node_modules" />
-  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="50" />
     <option name="y" value="23" />
-    <option name="width" value="1246" />
+    <option name="width" value="1519" />
     <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -210,6 +99,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -275,7 +165,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -382,32 +271,34 @@
       <workItem from="1480629111008" duration="3164000" />
       <workItem from="1480711101485" duration="57000" />
       <workItem from="1481062225703" duration="2937000" />
+      <workItem from="1481070374491" duration="11000" />
+      <workItem from="1481070419299" duration="65000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55938000" />
+    <option name="totallyTimeSpent" value="56014000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="50" y="23" width="1246" height="1027" extended-state="0" />
+    <frame x="50" y="23" width="1519" height="1027" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16244897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13217624" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -479,7 +370,7 @@
         <state relative-caret-position="4965">
           <caret line="331" column="42" selection-start-line="331" selection-start-column="42" selection-end-line="331" selection-end-column="42" />
           <folding>
-            <marker date="1481062484000" expanded="true" signature="5058:5515" ph="{...}" />
+            <marker date="1481070348000" expanded="true" signature="5058:5515" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -531,7 +422,7 @@
         <state relative-caret-position="4125">
           <caret line="275" column="4" selection-start-line="275" selection-start-column="4" selection-end-line="275" selection-end-column="4" />
           <folding>
-            <marker date="1481062484000" expanded="true" signature="5058:5515" ph="{...}" />
+            <marker date="1481070348000" expanded="true" signature="5058:5515" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -569,7 +460,7 @@
         <state relative-caret-position="2400">
           <caret line="160" column="22" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
           <folding>
-            <marker date="1481062484000" expanded="true" signature="5058:5515" ph="{...}" />
+            <marker date="1481070348000" expanded="true" signature="5058:5515" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -614,7 +505,7 @@
         <state relative-caret-position="2655">
           <caret line="177" column="4" selection-start-line="177" selection-start-column="4" selection-end-line="177" selection-end-column="4" />
           <folding>
-            <marker date="1481062484000" expanded="true" signature="5058:5515" ph="{...}" />
+            <marker date="1481070348000" expanded="true" signature="5058:5515" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -698,15 +589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="36" column="80" selection-start-line="36" selection-start-column="80" selection-end-line="36" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Encore/README.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -714,7 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -723,7 +604,7 @@
         <state relative-caret-position="345">
           <caret line="145" column="8" selection-start-line="145" selection-start-column="8" selection-end-line="145" selection-end-column="8" />
           <folding>
-            <marker date="1481062484000" expanded="true" signature="5058:5515" ph="{...}" />
+            <marker date="1481070348000" expanded="true" signature="5058:5515" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -732,7 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="523">
           <caret line="48" column="99" selection-start-line="48" selection-start-column="99" selection-end-line="48" selection-end-column="115" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -740,7 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -748,6 +627,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Encore/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
