@@ -5192,7 +5192,7 @@ function($timeout, $document, $q, $ionicClickBlock, $ionicConfig, $ionicNavBarDe
  * The patch can be applied to Angular 1.2.0 – 1.4.5. Newer versions of Angular
  * have the workaround baked in.
  *
- * To apply this patch load/bundle this file with your application and add a
+ * To apply this patch load/bundle this file with your Encore and add a
  * dependency on the "ngIOS9UIWebViewPatch" module to your main app module.
  *
  * For example:

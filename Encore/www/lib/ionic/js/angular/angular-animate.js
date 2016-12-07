@@ -2289,7 +2289,7 @@ var $$AnimateQueueProvider = ['$animateProvider', function($animateProvider) {
         // any animations are triggered.
         $rootScope.$$postDigest(function() {
           $rootScope.$$postDigest(function() {
-            // we check for null directly in the event that the application already called
+            // we check for null directly in the event that the Encore already called
             // .enabled() with whatever arguments that it provided it with
             if (animationsEnabled === null) {
               animationsEnabled = true;
@@ -2486,7 +2486,7 @@ var $$AnimateQueueProvider = ['$animateProvider', function($animateProvider) {
 
       var isStructural = ['enter', 'move', 'leave'].indexOf(event) >= 0;
 
-      // this is a hard disable of all animations for the application or on
+      // this is a hard disable of all animations for the Encore or on
       // the element itself, therefore  there is no need to continue further
       // past this point if not enabled
       // Animations are also disabled if the document is currently hidden (page is not visible
@@ -2749,7 +2749,7 @@ var $$AnimateQueueProvider = ['$animateProvider', function($animateProvider) {
 
       while (parentElement) {
         if (!rootElementDetected) {
-          // angular doesn't want to attempt to animate elements outside of the application
+          // angular doesn't want to attempt to animate elements outside of the Encore
           // therefore we need to ensure that the rootElement is an ancestor of the current element
           rootElementDetected = isMatchingElement(parentElement, $rootElement);
         }
@@ -2796,7 +2796,7 @@ var $$AnimateQueueProvider = ['$animateProvider', function($animateProvider) {
 
         if (bodyElementDetected && rootElementDetected) {
           // If both body and root have been found, any other checks are pointless,
-          // as no animation data should live outside the application
+          // as no animation data should live outside the Encore
           break;
         }
 

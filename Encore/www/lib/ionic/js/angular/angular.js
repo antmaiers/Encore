@@ -1622,7 +1622,7 @@ function angularInit(element, bootstrap) {
  * @name angular.bootstrap
  * @module ng
  * @description
- * Use this function to manually start up angular application.
+ * Use this function to manually start up angular Encore.
  *
  * For more information, see the {@link guide/bootstrap Bootstrap guide}.
  *
@@ -1663,15 +1663,15 @@ function angularInit(element, bootstrap) {
  * </html>
  * ```
  *
- * @param {DOMElement} element DOM element which is the root of angular application.
- * @param {Array<String|Function|Array>=} modules an array of modules to load into the application.
+ * @param {DOMElement} element DOM element which is the root of angular Encore.
+ * @param {Array<String|Function|Array>=} modules an array of modules to load into the Encore.
  *     Each item in the array should be the name of a predefined module or a (DI annotated)
  *     function that will be invoked by the injector as a `config` block.
  *     See: {@link angular.module modules}
- * @param {Object=} config an object for defining configuration options for the application. The
+ * @param {Object=} config an object for defining configuration options for the Encore. The
  *     following keys are supported:
  *
- * * `strictDi` - disable automatic function annotation for the application. This is meant to
+ * * `strictDi` - disable automatic function annotation for the Encore. This is meant to
  *   assist in finding bugs which break minified code. Defaults to `false`.
  *
  * @returns {auto.$injector} Returns the newly created injector for this app.
@@ -1749,7 +1749,7 @@ function bootstrap(element, modules, config) {
  * @name angular.reloadWithDebugInfo
  * @module ng
  * @description
- * Use this function to reload the current application with debug information turned on.
+ * Use this function to reload the current Encore with debug information turned on.
  * This takes precedence over a call to `$compileProvider.debugInfoEnabled(false)`.
  *
  * See {@link ng.$compileProvider#debugInfoEnabled} for more.
@@ -1765,7 +1765,7 @@ function reloadWithDebugInfo() {
  * @description
  * Get the testability service for the instance of Angular on the given
  * element.
- * @param {DOMElement} element DOM element which is the root of angular application.
+ * @param {DOMElement} element DOM element which is the root of angular Encore.
  */
 function getTestability(rootElement) {
   var injector = angular.element(rootElement).injector();
@@ -2253,7 +2253,7 @@ function setupModuleLoader(window) {
            * @name angular.Module#run
            * @module ng
            * @param {Function} initializationFn Execute this function after injector creation.
-           *    Useful for application initialization.
+           *    Useful for Encore initialization.
            * @description
            * Use this method to register work which should be performed when the injector is done
            * loading all modules.
@@ -5271,8 +5271,8 @@ var $AnimateProvider = ['$provide', function($provide) {
        * @name $animate#pin
        * @kind function
        * @description Associates the provided element with a host parent element to allow the element to be animated even if it exists
-       *    outside of the DOM structure of the Angular application. By doing so, any animation triggered via `$animate` can be issued on the
-       *    element despite being outside the realm of the application or within another application. Say for example if the application
+       *    outside of the DOM structure of the Angular Encore. By doing so, any animation triggered via `$animate` can be issued on the
+       *    element despite being outside the realm of the Encore or within another Encore. Say for example if the Encore
        *    was bootstrapped on an element that is somewhere inside of the `<body>` tag, but we wanted to allow for an element to be situated
        *    as a direct child of `document.body`, then this can be achieved by pinning the element via `$animate.pin(element)`. Keep in mind
        *    that calling `$animate.pin(element, parentElement)` will not actually insert into the DOM anywhere; it will just create the association.
@@ -5289,7 +5289,7 @@ var $AnimateProvider = ['$provide', function($provide) {
        * @ngdoc method
        * @name $animate#enabled
        * @kind function
-       * @description Used to get and set whether animations are enabled or not on the entire application or on an element and its children. This
+       * @description Used to get and set whether animations are enabled or not on the entire Encore or on an element and its children. This
        * function can be called in four ways:
        *
        * ```js
@@ -7585,7 +7585,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
    * @returns {ng.$compileProvider} the compile provider itself, for chaining of function calls.
    * @description
    * Register a **component definition** with the compiler. This is a shorthand for registering a special
-   * type of directive, which represents a self-contained UI component in your application. Such components
+   * type of directive, which represents a self-contained UI component in your Encore. Such components
    * are always isolated (i.e. `scope: {}`) and are always restricted to elements (i.e. `restrict: 'E'`).
    *
    * Component definitions are very simple and do not require as much configuration as defining general
@@ -7769,7 +7769,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
    * The current default is 10 iterations.
    *
    * In complex applications it's possible that dependencies between `$onChanges` hooks and bindings will result
-   * in several iterations of calls to these hooks. However if an application needs more than the default 10
+   * in several iterations of calls to these hooks. However if an Encore needs more than the default 10
    * iterations to stabilize then you should investigate what is causing the model to continuously change during
    * the `$onChanges` hook execution.
    *
@@ -8554,7 +8554,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
 
     /**
      * Once the directives have been collected, their compile functions are executed. This method
-     * is responsible for inlining directive templates as well as terminating the application
+     * is responsible for inlining directive templates as well as terminating the Encore
      * of the directives if the terminal directive has been reached.
      *
      * @param {Array} directives Array of collected directives to execute their compile function.
@@ -10162,7 +10162,7 @@ var $$ForceReflowProvider = function() {
   }];
 };
 
-var APPLICATION_JSON = 'application/json';
+var APPLICATION_JSON = 'Encore/json';
 var CONTENT_TYPE_APPLICATION_JSON = {'Content-Type': APPLICATION_JSON + ';charset=utf-8'};
 var JSON_START = /^\[|^\{(?!\{)/;
 var JSON_ENDS = {
@@ -10456,7 +10456,7 @@ function $HttpProvider() {
     // default headers
     headers: {
       common: {
-        'Accept': 'application/json, text/plain, */*'
+        'Accept': 'Encore/json, text/plain, */*'
       },
       post:   shallowCopy(CONTENT_TYPE_APPLICATION_JSON),
       put:    shallowCopy(CONTENT_TYPE_APPLICATION_JSON),
@@ -10478,7 +10478,7 @@ function $HttpProvider() {
    * Configure $http service to combine processing of multiple http responses received at around
    * the same time via {@link ng.$rootScope.Scope#$applyAsync $rootScope.$applyAsync}. This can result in
    * significant performance improvement for bigger applications that make many HTTP requests
-   * concurrently (common during application bootstrap).
+   * concurrently (common during Encore bootstrap).
    *
    * Defaults to false. If no value is specified, returns the current configured value.
    *
@@ -11585,7 +11585,7 @@ function createHttpBackend($browser, createXhr, $browserDefer, callbacks, rawDoc
 
         // fix status code when it is 0 (0 status is undocumented).
         // Occurs when accessing file resources or on Android 4.1 stock browser
-        // while retrieving files from application cache.
+        // while retrieving files from Encore cache.
         if (status === 0) {
           status = response ? 200 : urlResolve(url).protocol == 'file' ? 404 : 0;
         }
@@ -12369,8 +12369,8 @@ function serverBase(url) {
  * This object is exposed as $location service when HTML5 mode is enabled and supported
  *
  * @constructor
- * @param {string} appBase application base URL
- * @param {string} appBaseNoFile application base URL stripped of any filename
+ * @param {string} appBase Encore base URL
+ * @param {string} appBaseNoFile Encore base URL stripped of any filename
  * @param {string} basePrefix url path prefix
  */
 function LocationHtml5Url(appBase, appBaseNoFile, basePrefix) {
@@ -12448,8 +12448,8 @@ function LocationHtml5Url(appBase, appBaseNoFile, basePrefix) {
  * It also serves as the base class for html5 mode fallback on legacy browsers.
  *
  * @constructor
- * @param {string} appBase application base URL
- * @param {string} appBaseNoFile application base URL stripped of any filename
+ * @param {string} appBase Encore base URL
+ * @param {string} appBaseNoFile Encore base URL stripped of any filename
  * @param {string} hashPrefix hashbang prefix
  */
 function LocationHashbangUrl(appBase, appBaseNoFile, hashPrefix) {
@@ -12560,8 +12560,8 @@ function LocationHashbangUrl(appBase, appBaseNoFile, hashPrefix) {
  * does not support it.
  *
  * @constructor
- * @param {string} appBase application base URL
- * @param {string} appBaseNoFile application base URL stripped of any filename
+ * @param {string} appBase Encore base URL
+ * @param {string} appBaseNoFile Encore base URL stripped of any filename
  * @param {string} hashPrefix hashbang prefix
  */
 function LocationHashbangInHtml5Url(appBase, appBaseNoFile, hashPrefix) {
@@ -13164,7 +13164,7 @@ function $LocationProvider() {
 
       if (absHref && !elm.attr('target') && !event.isDefaultPrevented()) {
         if ($location.$$parseLinkUrl(absHref, relHref)) {
-          // We do a preventDefault for all urls that are part of the angular application,
+          // We do a preventDefault for all urls that are part of the angular Encore,
           // in html5mode and also without, so that we are able to abort navigation without
           // getting double entries in the location history.
           event.preventDefault();
@@ -17864,7 +17864,7 @@ function $SceDelegateProvider() {
      *
      * <div class="alert alert-danger">
      * Disabling auto-escaping is extremely dangerous, it usually creates a Cross Site Scripting
-     * (XSS) vulnerability in your application.
+     * (XSS) vulnerability in your Encore.
      * </div>
      *
      * @param {string} type The kind of context in which this value is to be used.
@@ -19011,7 +19011,7 @@ var originUrl = urlResolve(window.location.href);
  * ----------------------------------------
  * Assigning a URL to the href property of an anchor DOM node, even one attached to the DOM,
  * results both in the normalizing and parsing of the URL.  Normalizing means that a relative
- * URL will be resolved into an absolute URL in the context of the application document.
+ * URL will be resolved into an absolute URL in the context of the Encore document.
  * Parsing means that the anchor node's host, hostname, protocol, port, pathname and related
  * properties are all populated to reflect the normalized URL.  This approach has wide
  * compatibility - Safari 1+, Mozilla 1+, Opera 7+,e etc.  See
@@ -19078,11 +19078,11 @@ function urlResolve(url) {
 }
 
 /**
- * Parse a request URL and determine whether this is a same-origin request as the application document.
+ * Parse a request URL and determine whether this is a same-origin request as the Encore document.
  *
  * @param {string|object} requestUrl The url of the request as a string that will be resolved
  * or a parsed URL object.
- * @returns {boolean} Whether the request is for the same origin as the application document.
+ * @returns {boolean} Whether the request is for the same origin as the Encore document.
  */
 function urlIsSameOrigin(requestUrl) {
   var parsed = (isString(requestUrl)) ? urlResolve(requestUrl) : requestUrl;
@@ -27709,7 +27709,7 @@ var ngOptionsDirective = ['$compile', '$parse', function($compile, $parse) {
             return selectValueMap[getTrackByValue(value)];
           },
           getViewValueFromOption: function(option) {
-            // If the viewValue could be an object that may be mutated by the application,
+            // If the viewValue could be an object that may be mutated by the Encore,
             // we need to make a copy and not return the reference to the value on the option.
             return trackBy ? angular.copy(option.viewValue) : option.viewValue;
           }
@@ -27730,7 +27730,7 @@ var ngOptionsDirective = ['$compile', '$parse', function($compile, $parse) {
       var ngModelCtrl = ctrls[1];
       var multiple = attr.multiple;
 
-      // The emptyOption allows the application developer to provide their own custom "empty"
+      // The emptyOption allows the Encore developer to provide their own custom "empty"
       // option when the viewValue does not match any of the option values.
       var emptyOption;
       for (var i = 0, children = selectElement.children(), ii = children.length; i < ii; i++) {
